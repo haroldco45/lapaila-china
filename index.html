@@ -6,9 +6,10 @@
 <title>La Paila China · Cocina casera & arroz chino · Caucasia</title>
 <meta name="description" content="Almuerzos caseros, arroz chino a tu gusto, porciones salteadas en la paila y desayunos. Pide por WhatsApp: recoger, en mesa o domicilio. Barrio El Triángulo, Caucasia.">
 <meta name="theme-color" content="#b3121b">
+<meta name="referrer" content="no-referrer">
 <link rel="manifest" href="manifest.json">
-<link rel="icon" href="https://lapailachina.com/icons/logo.png">
-<link rel="apple-touch-icon" href="https://lapailachina.com/icons/logo.png">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <!-- Open Graph / Twitter (vista previa del enlace) -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lapaila-china.netlify.app/">
@@ -38,7 +39,7 @@ a{color:inherit}
 .pill{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 11px;font-size:13px;font-weight:600}
 .pill.on{background:#fff;color:var(--negro)}
 /* Hero */
-.hero{position:relative;height:78vh;min-height:460px;overflow:hidden;color:#fff}
+.hero{position:relative;height:78vh;min-height:460px;overflow:hidden;color:#fff;background:radial-gradient(circle at 70% 20%,#e0301e,#7a0b10 55%,#1a0707)}
 .hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.4s ease}
 .hero .bg.on{opacity:1;animation:kb 9s ease-out forwards}
 @keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.14)}}
@@ -68,7 +69,7 @@ h2{font-size:34px;text-transform:uppercase;line-height:1;margin:4px 0 14px}
 .sub{color:var(--gris);margin-top:-8px;margin-bottom:16px}
 /* Hoy */
 .hoy{display:grid;gap:14px;grid-template-columns:1fr}
-.hoy-card{position:relative;border-radius:18px;overflow:hidden;min-height:260px;color:#fff;background:#222}
+.hoy-card{position:relative;border-radius:18px;overflow:hidden;min-height:260px;color:#fff;background:radial-gradient(circle at 80% 10%,#e0301e,#7a0b10 60%,#1a0707)}
 .hoy-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hoy-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.85))}
 .hoy-card .in{position:absolute;bottom:0;left:0;right:0;padding:18px;z-index:2}
@@ -95,6 +96,11 @@ h2{font-size:34px;text-transform:uppercase;line-height:1;margin:4px 0 14px}
 .plato .d{flex:1;min-width:0}
 .plato h3{font-size:19px;text-transform:uppercase;line-height:1.05}
 .plato p{font-size:13.5px;color:var(--gris);margin:3px 0 6px}
+.plato .ops{display:flex;flex-wrap:wrap;gap:5px;margin:4px 0 8px}
+.plato .op{border:1.5px solid var(--borde);border-radius:999px;padding:4px 10px;font-size:13px;font-weight:600;background:#fff}
+.plato .op.on{background:var(--negro);border-color:var(--negro);color:#fff}
+.plato{align-items:flex-start}
+.chip.off{opacity:.4;text-decoration:line-through;pointer-events:none}
 .plato .pie{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .precio{font-weight:800;font-size:17px}
 .mas{background:var(--rojo2);color:#fff;border-radius:10px;padding:8px 14px;font-weight:700;font-size:14px}
@@ -104,7 +110,7 @@ h2{font-size:34px;text-transform:uppercase;line-height:1;margin:4px 0 14px}
 /* Arroz chino armador */
 .armador{background:var(--negro);color:#fff;border-radius:22px;overflow:hidden;display:grid;grid-template-columns:1fr}
 @media(min-width:820px){.armador{grid-template-columns:1fr 1.1fr}}
-.armador .foto{min-height:240px;background:url(https://lapailachina.com/icons/og.jpg) center/cover;position:relative}
+.armador .foto{min-height:240px;background:radial-gradient(circle at 30% 30%,#e0301e,#7a0b10 60%,#1a0707) center/cover;position:relative;transition:background-image .4s}
 .armador .foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(20,16,16,.6))}
 .armador .op{padding:20px}
 .armador h3{font-size:28px;text-transform:uppercase;color:var(--oro)}
@@ -118,7 +124,7 @@ h2{font-size:34px;text-transform:uppercase;line-height:1;margin:4px 0 14px}
 /* Galería / visita */
 .visita{display:grid;gap:14px;grid-template-columns:1fr}
 @media(min-width:820px){.visita{grid-template-columns:1.2fr 1fr}}
-.fachada{border-radius:18px;overflow:hidden;position:relative;min-height:300px}
+.fachada{border-radius:18px;overflow:hidden;position:relative;min-height:300px;background:radial-gradient(circle at 30% 30%,#e0301e,#7a0b10 60%,#1a0707)}
 .fachada img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform 6s ease}
 .fachada:hover img{transform:scale(1.08)}
 .datos{background:#fff;border:1px solid var(--borde);border-radius:18px;padding:18px}
@@ -182,7 +188,7 @@ footer a{color:var(--oro)}
 <body>
 
 <header class="top">
-  <img src="https://lapailachina.com/icons/logo.png" alt="La Paila China">
+  <img src="https://lapailachina.com/icons/logo.png" alt="La Paila China" onerror="this.src='icon-192.png'">
   <div class="marca">La Paila China<small data-t="tagTop">Cocina casera & arroz chino</small></div>
   <button class="pill instalar" id="btnInstalar" data-t="instalar">Instalar</button>
   <button class="pill on" id="lgES">ES</button>
@@ -190,8 +196,10 @@ footer a{color:var(--oro)}
 </header>
 
 <div class="hero" id="hero">
-  <div class="bg on" style="background-image:url(https://lapailachina.com/demo/chicharron.jpg)"></div>
-  <div class="bg" style="background-image:url(https://lapailachina.com/icons/og.jpg)"></div>
+  <div class="bg on" style="background-image:url(https://lapailachina.com/demo/arrozchino.jpg)"></div>
+  <div class="bg" style="background-image:url(https://lapailachina.com/demo/chicharron.jpg)"></div>
+  <div class="bg" style="background-image:url(https://lapailachina.com/demo/chopsuey.jpg)"></div>
+  <div class="bg" style="background-image:url(https://lapailachina.com/demo/almuerzo.jpg)"></div>
   <div class="bg" style="background-image:url(https://lapailachina.com/demo/fachada.jpg)"></div>
   <div class="txt">
     <span class="estado"><span class="punto" id="punto"></span><span id="estadoTxt">…</span></span>
@@ -211,12 +219,12 @@ footer a{color:var(--oro)}
   <h2 id="hoyTitulo">Menú de hoy</h2>
   <div class="hoy">
     <div class="hoy-card">
-      <img src="https://lapailachina.com/demo/chicharron.jpg" alt="Plato del día">
+      <img src="https://lapailachina.com/demo/almuerzo.jpg" alt="Almuerzo del día" onerror="this.remove()">
       <div class="in">
-        <span class="tag" data-t="platoDia">Plato del día</span>
+        <span class="tag" data-t="platoDia">Almuerzo de hoy</span>
         <h3 id="hoyPlato">—</h3>
         <div id="hoyDesc" style="opacity:.92"></div>
-        <button class="btn rojo" style="margin-top:12px" id="hoyPedir" data-t="loQuiero">Lo quiero</button>
+        <button class="btn rojo" style="margin-top:12px" id="hoyPedir" data-t="loQuiero">Armar mi almuerzo</button>
       </div>
     </div>
     <div class="hoy-info">
@@ -225,32 +233,34 @@ footer a{color:var(--oro)}
       <div class="fila"><span data-t="hHoy">Horario de hoy</span><b id="horHoy">—</b></div>
       <div class="fila"><span data-t="hCierra">Cierra en</span><b id="faltan">—</b></div>
       <div class="fila"><span data-t="hServicio">Servicio</span><b data-t="hServVal">Recoger · Mesa · Domicilio</b></div>
-      <div class="fila"><span data-t="hDomi">Domicilio</span><b id="domiVal">$5.000</b></div>
+      <div class="fila"><span data-t="hDomi">Domicilio</span><b id="domiVal">$4.000 a $8.000</b></div>
       <div class="fila"><span data-t="hPago">Pagos</span><b data-t="hPagoVal">Efectivo · Transferencia · QR · Tarjeta</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="almuerzo">
+  <div class="armador">
+    <div class="foto" id="almFoto"></div>
+    <div class="op">
+      <div class="kicker" style="color:var(--oro)" data-t="kAlm">Hecho con sazón de hogar</div>
+      <h3 data-t="tAlm">Arma tu almuerzo</h3>
+      <p style="opacity:.85;font-size:14px;margin-top:4px" data-t="pAlm">Seco: la proteína que elijas con arroz, tajada, ensalada, frijoles en el plato y jugo. Si agregas una sopa, es almuerzo completo.</p>
+      <div class="grupo"><div class="t" data-t="gProt">1. Proteína</div><div class="chips" id="gProt"></div></div>
+      <div class="grupo"><div class="t" data-t="gSopa">2. Sopa (opcional)</div><div class="chips" id="gSopa"></div></div>
+      <div class="total-armado"><div><small id="armTipo" style="display:block;opacity:.8"></small><b id="armTotal">$0</b></div><button class="btn rojo" id="armAgregar" data-t="agregar">Agregar al pedido</button></div>
     </div>
   </div>
 </section>
 
 <section id="menu">
   <div class="kicker" data-t="kMenu">La carta</div>
-  <h2 data-t="tMenu">Menú</h2>
+  <h2 data-t="tMenu">¿Deseas agregar algo más?</h2>
   <div class="tabs" id="tabs"></div>
   <div class="grid" id="platos"></div>
 </section>
 
-<section id="arroz">
-  <div class="armador">
-    <div class="foto"></div>
-    <div class="op">
-      <div class="kicker" style="color:var(--oro)" data-t="kArroz">Salteado en la paila</div>
-      <h3 data-t="tArroz">Arma tu arroz chino</h3>
-      <div class="grupo"><div class="t" data-t="gTam">Tamaño</div><div class="chips" id="gTam"></div></div>
-      <div class="grupo"><div class="t" data-t="gProt">Proteínas (elige las que quieras)</div><div class="chips" id="gProt"></div></div>
-      <div class="grupo"><div class="t" data-t="gExtra">Acompañantes</div><div class="chips" id="gExtra"></div></div>
-      <div class="total-armado"><b id="armTotal">$0</b><button class="btn rojo" id="armAgregar" data-t="agregar">Agregar al pedido</button></div>
-    </div>
-  </div>
-</section>
+
 
 <section id="resenas">
   <div class="kicker" data-t="kRes">¿Ya probaste?</div>
@@ -263,7 +273,7 @@ footer a{color:var(--oro)}
   <div class="kicker" data-t="kVis">Ven por tu plato</div>
   <h2 data-t="tVis">Visítanos</h2>
   <div class="visita">
-    <div class="fachada"><img src="https://lapailachina.com/demo/fachada.jpg" alt="Fachada La Paila China"></div>
+    <div class="fachada"><img src="https://lapailachina.com/demo/fachada.jpg" alt="Fachada La Paila China" onerror="this.remove()"></div>
     <div class="datos">
       <h3>La Paila China</h3>
       <div class="l"><b data-t="dDir">Dirección</b>Cl. 11a #21-68, Barrio El Triángulo, Caucasia, Antioquia</div>
@@ -298,14 +308,18 @@ footer a{color:var(--oro)}
   <div id="lineas"></div>
   <div class="campo"><label data-t="lTipo">¿Cómo lo quieres?</label>
     <div class="seg" id="segTipo">
-      <button data-v="recoger" class="on" data-t="oRecoger">Recoger</button>
-      <button data-v="mesa" data-t="oMesa">En mesa</button>
+      <button data-v="mesa" class="on" data-t="oMesa">En el local</button>
+      <button data-v="recoger" data-t="oRecoger">Recoger</button>
       <button data-v="domicilio" data-t="oDomi">Domicilio</button>
     </div>
   </div>
   <div class="campo"><label data-t="lNombre">Nombre</label><input id="fNombre" autocomplete="name"></div>
-  <div class="campo" id="cMesa" style="display:none"><label data-t="lMesa">Número de mesa o personas</label><input id="fMesa"></div>
-  <div class="campo" id="cDir" style="display:none"><label data-t="lDir">Dirección y barrio</label><input id="fDir" autocomplete="street-address"></div>
+  <div class="campo" id="cMesa" style="display:none"><label data-t="lMesa">Mesa o número de personas (opcional)</label><input id="fMesa"></div>
+  <div id="cDir" style="display:none">
+    <div class="campo"><label data-t="lZona">Zona o barrio de entrega</label><select id="fZona"></select><div class="privacidad" data-t="zonaNota">Si va a otra zona, se cobra la diferencia.</div></div>
+    <div class="campo"><label data-t="lDir">Dirección de entrega</label><input id="fDir" autocomplete="street-address"></div>
+    <div class="campo"><label data-t="lCel">Celular de contacto</label><input id="fCel" inputmode="tel" autocomplete="tel"></div>
+  </div>
   <div class="campo"><label data-t="lPago">Forma de pago</label>
     <div class="seg c4" id="segPago">
       <button data-v="Efectivo" class="on" data-t="pEf">Efectivo</button>
@@ -332,263 +346,204 @@ footer a{color:var(--oro)}
 <div class="hoja" id="hojaAdmin">
   <button class="cerrar" data-cerrar data-t="cerrar">Cerrar</button>
   <div class="kicker" data-t="admin">Administrar menú</div>
-  <h2 data-t="tAdm">Precios y platos</h2>
+  <h2 data-t="tAdm">Menú de hoy</h2>
   <div class="campo"><label data-t="lWa">WhatsApp del restaurante (con 57)</label><input id="aWa" inputmode="numeric" placeholder="573001234567"></div>
-  <div class="campo"><label data-t="lDomiV">Valor del domicilio</label><input id="aDomi" inputmode="numeric"></div>
-  <div class="campo"><label data-t="lPlatoDia">Plato del día por día de la semana</label><div id="aDias"></div></div>
-  <div class="campo"><label data-t="lPlatos">Platos (nombre, precio, categoría)</label><div class="admin-lista" id="aLista"></div>
-    <button class="mini" id="aNuevo" data-t="nuevo">Agregar plato</button></div>
-  <div class="ctas"><button class="btn rojo" id="aGuardar" data-t="guardar">Guardar</button><button class="btn borde" id="aReset" data-t="reset">Volver al menú base</button></div>
-  <p class="privacidad" data-t="admNota">Los cambios quedan guardados en este celular. Para que todos los clientes los vean, pásale a Vibras Positivas HM la lista final y se publica.</p>
+  <div class="campo"><label data-t="lAgot">Toca lo que está agotado hoy</label><div class="chips" id="aAgot" style="gap:6px"></div></div>
+  <div class="ctas"><button class="btn rojo" id="aGuardar" data-t="guardar">Guardar</button></div>
+  <p class="privacidad" data-t="admNota">Esto queda guardado en este celular.</p>
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script>
-/* ====== DATOS BASE (editar aquí los precios reales) ====== */
-const BASE = {
-  wa: "",            // WhatsApp del restaurante, ej. 573001234567
-  domicilio: 5000,
-  categorias: ["almuerzos","porciones","arroz","desayunos","siempre"],
-  platos: [
-    {id:"a1",cat:"almuerzos",n:"Almuerzo del día",en:"Lunch of the day",d:"Sopa, seco del día, arroz, principio, ensalada y jugo",den:"Soup, main of the day, rice, beans, salad and juice",p:15000,img:"https://lapailachina.com/demo/chicharron.jpg"},
-    {id:"a2",cat:"almuerzos",n:"Chicharrón casero",en:"Homestyle pork crackling",d:"Arroz, maduro, fríjoles y ensalada",den:"Rice, sweet plantain, beans and salad",p:18000,img:"https://lapailachina.com/demo/chicharron.jpg"},
-    {id:"a3",cat:"almuerzos",n:"Pechuga a la plancha",en:"Grilled chicken breast",d:"Arroz, papa, ensalada y jugo",den:"Rice, potato, salad and juice",p:17000},
-    {id:"a4",cat:"almuerzos",n:"Carne asada",en:"Grilled beef",d:"Arroz, maduro, ensalada y jugo",den:"Rice, plantain, salad and juice",p:18000},
-    {id:"p1",cat:"porciones",n:"Pollo salteado",en:"Stir-fried chicken",d:"Salteado en la paila con verduras",den:"Wok-tossed with vegetables",p:14000},
-    {id:"p2",cat:"porciones",n:"Costilla agridulce",en:"Sweet and sour ribs",d:"Costilla de cerdo en salsa agridulce",den:"Pork ribs in sweet and sour sauce",p:16000},
-    {id:"p3",cat:"porciones",n:"Papas a la francesa",en:"French fries",d:"Porción personal",den:"Single portion",p:6000},
-    {id:"p4",cat:"porciones",n:"Lumpias",en:"Spring rolls",d:"Tres unidades",den:"Three pieces",p:8000},
-    {id:"r1",cat:"arroz",n:"Arroz chino sencillo",en:"Classic Chinese rice",d:"Pollo, cerdo, verduras y raíces chinas",den:"Chicken, pork, vegetables and bean sprouts",p:15000,img:"https://lapailachina.com/icons/og.jpg"},
-    {id:"r2",cat:"arroz",n:"Arroz especial de la casa",en:"House special rice",d:"Pollo, cerdo, camarón y jamón",den:"Chicken, pork, shrimp and ham",p:22000,img:"https://lapailachina.com/icons/og.jpg"},
-    {id:"r3",cat:"arroz",n:"Combo pollo + arroz",en:"Chicken + rice combo",d:"1/4 de pollo, arroz chino y papas",den:"Quarter chicken, Chinese rice and fries",p:20000},
-    {id:"d1",cat:"desayunos",n:"Desayuno paisa",en:"Paisa breakfast",d:"Huevos, arepa, chocolate o café",den:"Eggs, arepa, hot chocolate or coffee",p:9000},
-    {id:"d2",cat:"desayunos",n:"Calentado",en:"Calentado",d:"Arroz, fríjoles, huevo y arepa",den:"Rice, beans, egg and arepa",p:10000},
-    {id:"s1",cat:"siempre",n:"Gaseosa 400 ml",en:"Soda 400 ml",d:"Fría",den:"Cold",p:3000},
-    {id:"s2",cat:"siempre",n:"Jugo natural",en:"Fresh juice",d:"En agua o en leche",den:"Water or milk based",p:5000},
-    {id:"s3",cat:"siempre",n:"Porción de arroz blanco",en:"White rice",d:"Porción adicional",den:"Extra portion",p:3000}
-  ],
-  dias: ["Sancocho de gallina","Chicharrón casero","Pollo guisado","Carne en bistec","Arroz chino especial","Bandeja de la casa","Sancocho trifásico"]
-};
-const ARMADOR = {
-  tam:[{n:"Personal",en:"Personal",p:13000},{n:"Mediano",en:"Medium",p:20000},{n:"Familiar",en:"Family",p:38000}],
-  prot:[{n:"Pollo",en:"Chicken",p:0},{n:"Cerdo",en:"Pork",p:0},{n:"Camarón",en:"Shrimp",p:5000},{n:"Jamón",en:"Ham",p:2000},{n:"Carne",en:"Beef",p:3000}],
-  extra:[{n:"Papas",en:"Fries",p:3000},{n:"Maduro",en:"Sweet plantain",p:2500},{n:"Ensalada",en:"Salad",p:2000},{n:"Lumpia",en:"Spring roll",p:3000}]
-};
-const RAZONES = [
-  {t:"Sazón de hogar",en:"Home flavor",d:"Cocina casera, como en la casa.",den:"Homestyle cooking, just like at home."},
-  {t:"Recién salido de la paila",en:"Fresh from the wok",d:"Arroz y porciones salteados al momento.",den:"Rice and portions stir-fried to order."},
-  {t:"Como tú lo pidas",en:"Your way",d:"Recoger, en mesa o domicilio. Paga en efectivo, transferencia, QR o tarjeta.",den:"Pickup, dine-in or delivery. Pay cash, transfer, QR or card."}
+/* ===== MENÚ REAL (tomado de lapailachina.com, nov 2026) ===== */
+const IMG="https://lapailachina.com/";
+const CONF={wa:""}; // WhatsApp del restaurante, ej. 573001234567
+const PROT=[
+ {n:"Res",en:"Beef",img:"demo/carne.jpg"},{n:"Cerdo",en:"Pork",img:"demo/cerdo.jpg"},{n:"Pechuga",en:"Chicken breast",img:"demo/pechuga.jpg"},
+ {n:"Sobrebarriga",en:"Flank steak",img:"api/menu?img=imw7a5e54rdzs&v=1794108955944"},{n:"Posta",en:"Beef round",img:"demo/posta.jpg"},
+ {n:"Carne desmechada",en:"Shredded beef"},{n:"Pollo desmechado",en:"Shredded chicken"},{n:"Costilla BBQ",en:"BBQ ribs",img:"demo/costillas.jpg"},
+ {n:"Pollo sudado",en:"Stewed chicken",img:"demo/pollo.jpg"},{n:"Albóndigas",en:"Meatballs",img:"demo/albondigas.jpg"},{n:"Chicharrón",en:"Pork crackling",img:"demo/chicharron.jpg"},
+ {n:"Róbalo",en:"Snook fish"},{n:"Hígado encebollado",en:"Liver and onions"},{n:"Carne molida",en:"Ground beef",img:"api/menu?img=imw7a58x4b0om&v=1794108949188"}
 ];
-const HOR = {lv:[8,21],sd:[8,22]}; // L-V 8-21, S-D 8-22
+const SECO=15000;
+const SOPAS=[{n:"Sin sopa",en:"No soup",p:0},{n:"Frijoles",en:"Beans",p:20000},{n:"Mondongo",en:"Tripe soup",p:21000},{n:"Sopa de gallina",en:"Hen soup",p:21000},{n:"Sopa de res",en:"Beef soup",p:20000}];
+const CATS=["porciones","arroz","desayunos"];
+const MENU=[
+ {id:"p1",cat:"porciones",n:"Sopa o frijoles",en:"Soup or beans",d:"Porción adicional. Solo salen las sopas de hoy.",den:"Extra portion. Only today's soups.",img:"api/menu?img=imw7a5ybu533y&v=1794108982105",
+  ops:[["Frijoles · Pequeña","Beans · Small",10000],["Frijoles · Grande","Beans · Large",15000],["Mondongo · Pequeña","Tripe · Small",11000],["Mondongo · Grande","Tripe · Large",16000],["Gallina · Pequeña","Hen · Small",11000],["Gallina · Grande","Hen · Large",16000],["Res · Pequeña","Beef · Small",10000],["Res · Grande","Beef · Large",15000]]},
+ {id:"p2",cat:"porciones",n:"Arroz",en:"Rice",d:"Porción adicional de arroz.",den:"Extra portion of rice.",p:3000},
+ {id:"r1",cat:"arroz",n:"Arroz chino",en:"Chinese rice",d:"Salteado en la paila. Elige el tamaño según cuántos sean.",den:"Stir-fried in the paila. Pick the size for your group.",img:"demo/arrozchino.jpg",
+  ops:[["Personal","Single",17000],["2 personas","2 people",23000],["4 personas","4 people",32000],["6 personas","6 people",40000],["9 personas","9 people",50000]]},
+ {id:"r2",cat:"arroz",n:"Chop suey",en:"Chop suey",d:"El acompañante perfecto para cualquier plato.",den:"The perfect side for any dish.",img:"demo/chopsuey.jpg",
+  ops:[["Pequeño","Small",7000],["Mediano","Medium",12000],["Grande","Large",17000]]},
+ {id:"r3",cat:"arroz",n:"Combo 1 pollo + arroz mega",en:"Whole chicken + mega rice",d:"El más grande, para los más hambrientos.",den:"The biggest one, for the hungriest.",p:73000,img:"demo/pollo.jpg"},
+ {id:"r4",cat:"arroz",n:"Combo 1 pollo + arroz grande",en:"Whole chicken + large rice",d:"Pollo entero con arroz chino grande.",den:"Whole chicken with large Chinese rice.",p:63000},
+ {id:"r5",cat:"arroz",n:"Combo ½ pollo + arroz mediano",en:"Half chicken + medium rice",d:"Ideal para compartir entre dos.",den:"Great to share between two.",p:45000},
+ {id:"r6",cat:"arroz",n:"Combo ¼ pollo + arroz",en:"Quarter chicken + rice",d:"Un cuarto de pollo con arroz chino.",den:"Quarter chicken with Chinese rice.",p:31000},
+ {id:"r7",cat:"arroz",n:"Combo 1 presa + arroz personal",en:"1 piece + single rice",d:"Una presa de pollo con arroz personal.",den:"One chicken piece with single rice.",p:22000},
+ {id:"r8",cat:"arroz",n:"Combo 1 presa + arroz + chop suey",en:"1 piece + rice + chop suey",d:"El completo, con chop suey incluido.",den:"The full one, chop suey included.",p:25000,img:"demo/chopsuey.jpg"},
+ {id:"d1",cat:"desayunos",n:"Combo completo",en:"Full breakfast",d:"Desayuno completo. Elige con carne o sin carne.",den:"Full breakfast, with or without meat.",ops:[["Con carne","With meat",20000],["Sin carne","No meat",13000]]},
+ {id:"d2",cat:"desayunos",n:"Calentado",en:"Calentado",d:"El de siempre.",den:"The classic.",p:5000},
+ {id:"d3",cat:"desayunos",n:"Arepa",en:"Arepa",d:"",den:"",p:1500},
+ {id:"d4",cat:"desayunos",n:"Huevos",en:"Eggs",d:"Ármalo a tu gusto.",den:"Your way.",ops:[["Huevo frito","Fried egg",1500],["Huevos revueltos","Scrambled eggs",4000],["Huevos con aliño","Eggs with hogao",5000],["Huevo ranchero","Ranch-style egg",6000]]},
+ {id:"d5",cat:"desayunos",n:"Carnes",en:"Meats",d:"Ármalo a tu gusto.",den:"Your way.",img:"demo/carne.jpg",ops:[["Pollo desmechado","Shredded chicken",8000],["Res desmechada","Shredded beef",10000],["Cerdo","Pork",10000],["Res","Beef",10000],["Chicharrón","Pork crackling",10000]]},
+ {id:"d6",cat:"desayunos",n:"Queso",en:"Cheese",d:"",den:"",ops:[["Queso","Cheese",4000],["Queso rallado","Grated cheese",4000]]},
+ {id:"d7",cat:"desayunos",n:"Acompañantes",en:"Sides",d:"Ármalo a tu gusto.",den:"Your way.",ops:[["Chorizo","Chorizo",2500],["Salchicha","Sausage",2000],["Patacón","Patacón",5000],["Aliños","Hogao",2000]]},
+ {id:"d8",cat:"desayunos",n:"Bebidas calientes",en:"Hot drinks",d:"",den:"",ops:[["Café","Coffee",2000],["Aguapanela","Aguapanela",2000],["Café con leche","Coffee with milk",2500],["Chocolate","Hot chocolate",3000],["Chocolate con leche","Hot chocolate with milk",3500]]}
+];
+const ZONAS=[["Cerca del restaurante",4000],["El Bosque",5000],["Torres Asovivienda",5000],["Torres Santa Elena",5000],["Dromedario",6000],["Malvinas",7000],["Paraguay",7000],["Pensilvania",8000],["Villa Suárez",8000]];
+const RAZONES=[
+ {t:"Sazón de hogar",en:"Home flavor",d:"Cocina casera, como en la casa.",den:"Homestyle cooking, just like at home."},
+ {t:"Recién salido de la paila",en:"Fresh from the wok",d:"Arroz chino y chop suey salteados al momento.",den:"Chinese rice and chop suey stir-fried to order."},
+ {t:"Como tú lo pidas",en:"Your way",d:"En el local, para recoger o a domicilio. Efectivo, transferencia, QR o tarjeta.",den:"Dine-in, pickup or delivery. Cash, transfer, QR or card."}
+];
+const HOR={lv:[8,21],sd:[8,22]};
 
-/* ====== TEXTOS ====== */
-const T = {
- es:{},
- en:{tagTop:"Homestyle cooking & Chinese rice",instalar:"Install",heroA:"Fire up",heroB:"the wok!",heroP:"Homestyle flavor, fresh from the paila. Lunches, Chinese rice your way, portions and breakfasts in Caucasia.",verMenu:"See the menu and order",comoLlegar:"How to get here",kHoy:"Today in the paila",platoDia:"Dish of the day",loQuiero:"I want it",hHoy:"Today's hours",hCierra:"Closes in",hServicio:"Service",hServVal:"Pickup · Dine-in · Delivery",hDomi:"Delivery",hPago:"Payment",hPagoVal:"Cash · Transfer · QR · Card",kMenu:"The menu",tMenu:"Menu",kArroz:"Stir-fried in the paila",tArroz:"Build your Chinese rice",gTam:"Size",gProt:"Proteins (pick any)",gExtra:"Sides",agregar:"Add to order",kRes:"Tried it already?",tRes:"Tell us how it was",dejarRes:"Leave your Google review",kVis:"Come get your plate",tVis:"Visit us",dDir:"Address",dHor:"Hours",abrirMapa:"Open in maps",pieA:"Made with home flavor",admin:"Manage menu",verPedido:"View my order",cerrar:"Close",kPed:"Your order",tPed:"Confirm and send",lTipo:"How do you want it?",oRecoger:"Pickup",oMesa:"Dine-in",oDomi:"Delivery",lNombre:"Name",lMesa:"Table number or people",lDir:"Address and neighborhood",lPago:"Payment method",pEf:"Cash",pTr:"Transfer",pTa:"Card",avisoRec:"Pickup orders are paid in full or with a 50% deposit by bank transfer.",lNota:"Notes for the kitchen",lFact:"I need an invoice",lNit:"Name or company and tax ID",rAnt:"50% deposit",enviar:"Send order via WhatsApp",priv:"Your data is only used for this order and is not stored on any server (Colombian Law 1581 of 2012).",tAdm:"Prices and dishes",lWa:"Restaurant WhatsApp (with 57)",lDomiV:"Delivery fee",lPlatoDia:"Dish of the day by weekday",lPlatos:"Dishes (name, price, category)",nuevo:"Add dish",guardar:"Save",reset:"Back to base menu",admNota:"Changes are saved on this phone."}
-};
-const CATN = {es:{almuerzos:"Almuerzos",porciones:"Porciones",arroz:"Arroz chino",desayunos:"Desayunos",siempre:"Siempre disponibles"},en:{almuerzos:"Lunches",porciones:"Portions",arroz:"Chinese rice",desayunos:"Breakfasts",siempre:"Always available"}};
-const DIAS = {es:["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"],en:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]};
+const T={en:{tagTop:"Homestyle cooking & Chinese rice",instalar:"Install",heroA:"Fire up",heroB:"the wok!",heroP:"Homestyle flavor, fresh from the paila. Lunches, Chinese rice, portions and breakfasts in Caucasia.",verMenu:"See the menu and order",comoLlegar:"How to get here",kHoy:"Today in the paila",platoDia:"Today's lunch",loQuiero:"Build my lunch",hHoy:"Today's hours",hCierra:"Closes in",hServicio:"Service",hServVal:"Dine-in · Pickup · Delivery",hDomi:"Delivery",hPago:"Payment",hPagoVal:"Cash · Transfer · QR · Card",kAlm:"Made with home flavor",tAlm:"Build your lunch",pAlm:"Main plate: the protein you pick with rice, plantain, salad, beans and juice. Add a soup and it's a full lunch.",gProt:"1. Protein",gSopa:"2. Soup (optional)",kMenu:"The menu",tMenu:"Anything else?",agregar:"Add to order",kRes:"Tried it already?",tRes:"Tell us how it was",dejarRes:"Leave your Google review",kVis:"Come get your plate",tVis:"Visit us",dDir:"Address",dHor:"Hours",abrirMapa:"Open in maps",pieA:"Made with home flavor",admin:"Manage menu",verPedido:"View my order",cerrar:"Close",kPed:"Your order",tPed:"Confirm and send",lTipo:"How do you want it?",oRecoger:"Pickup",oMesa:"Dine-in",oDomi:"Delivery",lNombre:"Your name",lMesa:"Table or number of people (optional)",lZona:"Delivery zone",zonaNota:"Other zones pay the difference.",lDir:"Delivery address",lCel:"Contact phone",lPago:"Payment method",pEf:"Cash",pTr:"Transfer",pTa:"Card",avisoRec:"Pickup orders are paid in full or with a 50% deposit by bank transfer.",lNota:"Notes for the kitchen",lFact:"I need an invoice",lNit:"Name or company and tax ID",rAnt:"50% deposit",enviar:"Send order via WhatsApp",priv:"Your data is only used for this order and is not stored on any server (Colombian Law 1581 of 2012).",tAdm:"Today's menu",lWa:"Restaurant WhatsApp (with 57)",lAgot:"Tap what is sold out today",guardar:"Save",admNota:"Saved on this phone."}};
+const CATN={es:{porciones:"Porciones",arroz:"Arroz chino",desayunos:"Desayunos"},en:{porciones:"Portions",arroz:"Chinese rice",desayunos:"Breakfasts"}};
+const DIAS={es:["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"],en:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]};
 
-/* ====== ESTADO ====== */
-let lang = localStorage.getItem("lp_lang")||"es";
-let DATA = cargar();
-let cat = "almuerzos";
-let carrito = JSON.parse(sessionStorage.getItem("lp_cart")||"[]");
-let tipo="recoger", pago="Efectivo";
-let arm = {tam:0,prot:new Set([0]),extra:new Set()};
-const $=s=>document.querySelector(s);
+let lang=localStorage.getItem("lp_lang")||"es";
+let cat="arroz", tipo="mesa", pago="Efectivo";
+let carrito=JSON.parse(sessionStorage.getItem("lp_cart")||"[]");
+let sel={}; // opción elegida por plato
+let alm={prot:null,sopa:0};
+let agot=new Set(JSON.parse(localStorage.getItem("lp_agot_"+hoyKey())||"[]"));
+CONF.wa=localStorage.getItem("lp_wa")||CONF.wa;
+const $=q=>document.querySelector(q);
 const cop=n=>"$"+Math.round(n).toLocaleString("es-CO");
+const L=(o)=>lang==="es"?o.n:(o.en||o.n);
 
-function cargar(){try{const g=JSON.parse(localStorage.getItem("lp_data"));if(g&&g.platos)return g}catch(e){}return JSON.parse(JSON.stringify(BASE))}
-function tr(k,es){return lang==="es"?es:(T.en[k]||es)}
-
-/* Hora real de Caucasia (America/Bogota) */
-function ahoraBog(){
-  const p=new Intl.DateTimeFormat("en-US",{timeZone:"America/Bogota",hour12:false,weekday:"short",hour:"2-digit",minute:"2-digit",second:"2-digit",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
-  const o={};p.forEach(x=>o[x.type]=x.value);
-  const wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday];
-  return {wd,h:+o.hour%24,m:+o.minute,s:+o.second,y:o.year,mo:o.month,d:o.day};
-}
-function horarioDe(wd){return (wd===0||wd===6)?HOR.sd:HOR.lv}
-function fmtH(h){const ap=h>=12?"p. m.":"a. m.";const hh=h%12||12;return hh+":00 "+ap}
+function ahoraBog(){const p=new Intl.DateTimeFormat("en-US",{timeZone:"America/Bogota",hour12:false,weekday:"short",hour:"2-digit",minute:"2-digit",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());const o={};p.forEach(x=>o[x.type]=x.value);return{wd:{Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday],h:+o.hour%24,m:+o.minute,y:o.year,mo:o.month,d:o.day}}
+function hoyKey(){const a=ahoraBog();return a.y+a.mo+a.d}
+const horDe=wd=>(wd===0||wd===6)?HOR.sd:HOR.lv;
+const fmtH=h=>(h%12||12)+(h>=12?" p. m.":" a. m.");
 
 function pintarTextos(){
   document.documentElement.lang=lang;
-  document.querySelectorAll("[data-t]").forEach(el=>{
-    if(!el.dataset.es) el.dataset.es=el.textContent;
-    el.textContent = lang==="es"?el.dataset.es:(T.en[el.dataset.t]||el.dataset.es);
-  });
+  document.querySelectorAll("[data-t]").forEach(el=>{if(!el.dataset.es)el.dataset.es=el.textContent;el.textContent=lang==="es"?el.dataset.es:(T.en[el.dataset.t]||el.dataset.es)});
   $("#lgES").classList.toggle("on",lang==="es");$("#lgEN").classList.toggle("on",lang==="en");
-  const frases = lang==="es"
-    ?["Hoy se cocina","Prende la paila","Arroz chino a tu gusto","Almuerzos caseros","Domicilios en Caucasia","Hecho con sazón de hogar"]
-    :["Cooking today","Fire up the wok","Chinese rice your way","Homestyle lunches","Delivery in Caucasia","Made with home flavor"];
-  const h=frases.map(f=>f+"<b>•</b>").join("");$("#cinta").innerHTML=h+h;
+  const f=lang==="es"?["Hoy se cocina","Prende la paila","Arroz chino desde $17.000","Almuerzo desde $15.000","Domicilios en Caucasia","Hecho con sazón de hogar"]:["Cooking today","Fire up the wok","Chinese rice from $17,000","Lunch from $15,000","Delivery in Caucasia","Made with home flavor"];
+  const h=f.map(x=>x+"<b>•</b>").join("");$("#cinta").innerHTML=h+h;
 }
-
-/* ====== HOY ====== */
 function pintarHoy(){
-  const a=ahoraBog();const [ab,ci]=horarioDe(a.wd);
-  const min=a.h*60+a.m, abierto=min>=ab*60&&min<ci*60;
+  const a=ahoraBog(),[ab,ci]=horDe(a.wd),min=a.h*60+a.m,abierto=min>=ab*60&&min<ci*60,es=lang==="es";
   $("#punto").classList.toggle("abierto",abierto);
-  const es=lang==="es";
-  $("#estadoTxt").textContent = abierto
-    ? (es?"Abierto ahora · cierra a las ":"Open now · closes at ")+fmtH(ci).replace(":00","")
-    : (es?"Cerrado · abrimos a las ":"Closed · we open at ")+fmtH(ab).replace(":00","");
+  $("#estadoTxt").textContent=abierto?(es?"Abierto ahora · cierra a las ":"Open now · closes at ")+fmtH(ci):(es?"Cerrado · abrimos a las ":"Closed · we open at ")+fmtH(ab);
   $("#reloj").textContent=String(a.h).padStart(2,"0")+":"+String(a.m).padStart(2,"0");
-  $("#fecha").textContent=DIAS[lang][a.wd]+" "+a.d+"/"+a.mo+"/"+a.y+(lang==="es"?" · hora de Caucasia":" · Caucasia time");
+  $("#fecha").textContent=DIAS[lang][a.wd]+" "+a.d+"/"+a.mo+"/"+a.y+(es?" · hora de Caucasia":" · Caucasia time");
   $("#horHoy").textContent=fmtH(ab)+" – "+fmtH(ci);
-  if(abierto){const f=ci*60-min;$("#faltan").textContent=Math.floor(f/60)+" h "+(f%60)+" min"}
-  else $("#faltan").textContent=lang==="es"?"Cerrado":"Closed";
-  $("#hoyTitulo").textContent=(lang==="es"?"Menú de hoy, ":"Today's menu, ")+DIAS[lang][a.wd].toLowerCase();
-  const pd=DATA.dias[a.wd]||"Almuerzo del día";
-  $("#hoyPlato").textContent=pd;
-  $("#hoyDesc").textContent=lang==="es"?"Con arroz, principio, ensalada y jugo. Hasta agotar existencias.":"With rice, beans, salad and juice. While it lasts.";
-  $("#domiVal").textContent=cop(DATA.domicilio);
-  const filas=[[lang==="es"?"Lunes a viernes":"Monday to Friday",HOR.lv,a.wd>=1&&a.wd<=5],[lang==="es"?"Sábado y domingo":"Saturday and Sunday",HOR.sd,a.wd===0||a.wd===6]];
+  if(abierto){const f=ci*60-min;$("#faltan").textContent=Math.floor(f/60)+" h "+(f%60)+" min"}else $("#faltan").textContent=es?"Cerrado":"Closed";
+  $("#hoyTitulo").textContent=(es?"Menú de hoy, ":"Today's menu, ")+DIAS[lang][a.wd].toLowerCase();
+  const disp=PROT.filter(p=>!agot.has(p.n));
+  $("#hoyPlato").textContent=(es?"Seco ":"Main plate ")+cop(SECO);
+  $("#hoyDesc").textContent=(es?"Completo con sopa desde $20.000. Hoy hay: ":"Full with soup from $20,000. Today: ")+disp.slice(0,6).map(L).join(", ")+(disp.length>6?"…":"");
+  const filas=[[es?"Lunes a viernes":"Monday to Friday",HOR.lv,a.wd>=1&&a.wd<=5],[es?"Sábados y domingos":"Saturday and Sunday",HOR.sd,a.wd===0||a.wd===6]];
   $("#tablaHor").innerHTML=filas.map(f=>`<tr class="${f[2]?"hoyd":""}"><td>${f[0]}</td><td>${fmtH(f[1][0])} – ${fmtH(f[1][1])}</td></tr>`).join("");
 }
 
-/* ====== MENÚ ====== */
-function pintarTabs(){
-  $("#tabs").innerHTML=DATA.categorias.map(c=>`<button class="tab ${c===cat?"on":""}" data-c="${c}">${CATN[lang][c]}</button>`).join("");
-  $("#tabs").querySelectorAll(".tab").forEach(b=>b.onclick=()=>{cat=b.dataset.c;pintarTabs();pintarPlatos();
-    if(cat==="arroz")setTimeout(()=>{},0)});
+/* ===== ARMA TU ALMUERZO ===== */
+function pintarAlm(){
+  if(alm.prot!==null&&agot.has(PROT[alm.prot].n))alm.prot=null;
+  $("#gProt").innerHTML=PROT.map((p,i)=>`<button class="chip ${alm.prot===i?"on":""} ${agot.has(p.n)?"off":""}" data-i="${i}">${L(p)}${agot.has(p.n)?(lang==="es"?" · agotado":" · sold out"):""}</button>`).join("");
+  $("#gSopa").innerHTML=SOPAS.map((s,i)=>`<button class="chip ${alm.sopa===i?"on":""}" data-s="${i}">${L(s)}${s.p?" "+cop(s.p):""}</button>`).join("");
+  $("#gProt").querySelectorAll(".chip").forEach(c=>c.onclick=()=>{alm.prot=+c.dataset.i;pintarAlm()});
+  $("#gSopa").querySelectorAll(".chip").forEach(c=>c.onclick=()=>{alm.sopa=+c.dataset.s;pintarAlm()});
+  const s=SOPAS[alm.sopa];$("#armTotal").textContent=cop(s.p||SECO);
+  $("#armTipo").textContent=s.p?(lang==="es"?"Almuerzo completo":"Full lunch"):(lang==="es"?"Seco":"Main plate");
+  const p=alm.prot!==null?PROT[alm.prot]:null;
+  $("#almFoto").style.backgroundImage=p&&p.img?`url("${IMG+p.img}"), radial-gradient(circle at 30% 30%,#e0301e,#7a0b10 60%,#1a0707)`:`url("${IMG}demo/almuerzo.jpg"), radial-gradient(circle at 30% 30%,#e0301e,#7a0b10 60%,#1a0707)`;
 }
-function cantDe(id){const l=carrito.find(x=>x.id===id);return l?l.q:0}
-function pintarPlatos(){
-  const ls=DATA.platos.filter(p=>p.cat===cat);
-  $("#platos").innerHTML=ls.map((p,i)=>{
-    const q=cantDe(p.id);const nm=lang==="es"?p.n:(p.en||p.n);const ds=lang==="es"?p.d:(p.den||p.d);
-    const foto=p.img?`<img class="foto" src="${p.img}" alt="${nm}" loading="lazy">`:`<div class="foto letra">${nm.charAt(0)}</div>`;
-    const ctrl=q?`<div class="cant"><button data-m="${p.id}">−</button><span>${q}</span><button data-a="${p.id}">+</button></div>`:`<button class="mas" data-a="${p.id}">${lang==="es"?"Agregar":"Add"}</button>`;
-    return `<div class="plato" style="animation-delay:${i*50}ms">${foto}<div class="d"><h3>${nm}</h3><p>${ds||""}</p><div class="pie"><span class="precio">${cop(p.p)}</span>${ctrl}</div></div></div>`;
-  }).join("");
-  $("#platos").querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>sumar(b.dataset.a,1));
-  $("#platos").querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>sumar(b.dataset.m,-1));
-}
-function sumar(id,d){
-  const p=DATA.platos.find(x=>x.id===id);let l=carrito.find(x=>x.id===id);
-  if(!l&&d>0){l={id,n:p.n,en:p.en,p:p.p,q:0};carrito.push(l)}
-  if(!l)return;l.q+=d;if(l.q<=0)carrito=carrito.filter(x=>x!==l);
-  guardarCarrito();pintarPlatos();if(d>0)aviso(lang==="es"?"Agregado al pedido":"Added to order");
-}
-function guardarCarrito(){sessionStorage.setItem("lp_cart",JSON.stringify(carrito));pintarBarra()}
-function subtotal(){return carrito.reduce((s,l)=>s+l.p*l.q,0)}
-function pintarBarra(){
-  const n=carrito.reduce((s,l)=>s+l.q,0);$("#barN").textContent=n;$("#barT").textContent=cop(subtotal());
-  const b=$("#barra");b.classList.toggle("on",n>0);b.classList.remove("salta");void b.offsetWidth;b.classList.add("salta");
-}
-
-/* ====== ARMADOR ARROZ ====== */
-function pintarArmador(){
-  const L=x=>lang==="es"?x.n:x.en;
-  const chip=(g,i,x,on)=>`<button class="chip ${on?"on":""}" data-g="${g}" data-i="${i}">${L(x)}${x.p?" +"+cop(x.p):""}</button>`;
-  $("#gTam").innerHTML=ARMADOR.tam.map((x,i)=>`<button class="chip ${arm.tam===i?"on":""}" data-g="tam" data-i="${i}">${L(x)} ${cop(x.p)}</button>`).join("");
-  $("#gProt").innerHTML=ARMADOR.prot.map((x,i)=>chip("prot",i,x,arm.prot.has(i))).join("");
-  $("#gExtra").innerHTML=ARMADOR.extra.map((x,i)=>chip("extra",i,x,arm.extra.has(i))).join("");
-  document.querySelectorAll("#arroz .chip").forEach(c=>c.onclick=()=>{
-    const g=c.dataset.g,i=+c.dataset.i;
-    if(g==="tam")arm.tam=i;else{const s=arm[g];s.has(i)?s.delete(i):s.add(i);if(g==="prot"&&!s.size)s.add(0)}
-    pintarArmador();
-  });
-  $("#armTotal").textContent=cop(precioArm());
-}
-function precioArm(){let t=ARMADOR.tam[arm.tam].p;arm.prot.forEach(i=>t+=ARMADOR.prot[i].p);arm.extra.forEach(i=>t+=ARMADOR.extra[i].p);return t}
 $("#armAgregar").onclick=()=>{
-  const tam=ARMADOR.tam[arm.tam];const pr=[...arm.prot].map(i=>ARMADOR.prot[i]);const ex=[...arm.extra].map(i=>ARMADOR.extra[i]);
-  const n=`Arroz chino ${tam.n} (${pr.map(x=>x.n).join(", ")}${ex.length?" + "+ex.map(x=>x.n).join(", "):""})`;
-  const en=`Chinese rice ${tam.en} (${pr.map(x=>x.en).join(", ")}${ex.length?" + "+ex.map(x=>x.en).join(", "):""})`;
-  const id="arm-"+n;const l=carrito.find(x=>x.id===id);
-  if(l)l.q++;else carrito.push({id,n,en,p:precioArm(),q:1});
-  guardarCarrito();aviso(lang==="es"?"Tu arroz va en el pedido":"Your rice is in the order");
+  if(alm.prot===null){aviso(lang==="es"?"Elige la proteína":"Pick a protein");return}
+  const p=PROT[alm.prot],s=SOPAS[alm.sopa];
+  const n=(s.p?"Almuerzo completo":"Seco")+" · "+p.n+(s.p?" + "+s.n:""),en=(s.p?"Full lunch":"Main plate")+" · "+p.en+(s.p?" + "+s.en:"");
+  agregarLinea("alm-"+n,n,en,s.p||SECO);aviso(lang==="es"?"Tu almuerzo va en el pedido":"Your lunch is in the order");
 };
 
-/* ====== RESEÑAS ====== */
+/* ===== CARTA ===== */
+function pintarTabs(){
+  $("#tabs").innerHTML=CATS.map(c=>`<button class="tab ${c===cat?"on":""}" data-c="${c}">${CATN[lang][c]}</button>`).join("");
+  $("#tabs").querySelectorAll(".tab").forEach(b=>b.onclick=()=>{cat=b.dataset.c;pintarTabs();pintarPlatos()});
+}
+function foto(src,nm){return src?`<img class="foto" src="${IMG+src}" alt="${nm}" loading="lazy" onerror="this.outerHTML='<div class=&quot;foto letra&quot;>${nm.charAt(0)}</div>'">`:`<div class="foto letra">${nm.charAt(0)}</div>`}
+function pintarPlatos(){
+  $("#platos").innerHTML=MENU.filter(m=>m.cat===cat).map((m,i)=>{
+    const nm=L(m),ds=lang==="es"?m.d:m.den;let cuerpo;
+    if(m.ops){const k=sel[m.id]??0;const o=m.ops[k];
+      cuerpo=`<div class="ops">${m.ops.map((x,j)=>`<button class="op ${j===k?"on":""}" data-pl="${m.id}" data-j="${j}">${lang==="es"?x[0]:x[1]}</button>`).join("")}</div><div class="pie"><span class="precio">${cop(o[2])}</span><button class="mas" data-add="${m.id}">${lang==="es"?"Agregar":"Add"}</button></div>`;
+    }else{const l=carrito.find(x=>x.id===m.id),q=l?l.q:0;
+      cuerpo=`<div class="pie"><span class="precio">${cop(m.p)}</span>${q?`<div class="cant"><button data-m="${m.id}">−</button><span>${q}</span><button data-add="${m.id}">+</button></div>`:`<button class="mas" data-add="${m.id}">${lang==="es"?"Agregar":"Add"}</button>`}</div>`}
+    return `<div class="plato" style="animation-delay:${i*45}ms">${foto(m.img,nm)}<div class="d"><h3>${nm}</h3>${ds?`<p>${ds}</p>`:""}${cuerpo}</div></div>`;
+  }).join("");
+  $("#platos").querySelectorAll("[data-pl]").forEach(b=>b.onclick=()=>{sel[b.dataset.pl]=+b.dataset.j;pintarPlatos()});
+  $("#platos").querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>{
+    const m=MENU.find(x=>x.id===b.dataset.add);
+    if(m.ops){const o=m.ops[sel[m.id]??0];agregarLinea(m.id+"-"+o[0],m.n+" · "+o[0],m.en+" · "+o[1],o[2])}
+    else agregarLinea(m.id,m.n,m.en,m.p);
+    aviso(lang==="es"?"Agregado al pedido":"Added to order");pintarPlatos();
+  });
+  $("#platos").querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{const l=carrito.find(x=>x.id===b.dataset.m);if(l){l.q--;if(l.q<=0)carrito=carrito.filter(x=>x!==l)}guardar();pintarPlatos()});
+}
+function agregarLinea(id,n,en,p){const l=carrito.find(x=>x.id===id);if(l)l.q++;else carrito.push({id,n,en,p,q:1});guardar()}
+function guardar(){sessionStorage.setItem("lp_cart",JSON.stringify(carrito));pintarBarra()}
+const subtotal=()=>carrito.reduce((s,l)=>s+l.p*l.q,0);
+function pintarBarra(){const n=carrito.reduce((s,l)=>s+l.q,0);$("#barN").textContent=n;$("#barT").textContent=cop(subtotal());const b=$("#barra");b.classList.toggle("on",n>0);b.classList.remove("salta");void b.offsetWidth;b.classList.add("salta")}
 function pintarRes(){$("#listaRes").innerHTML=RAZONES.map(r=>`<div class="res"><h3 style="font-size:22px;text-transform:uppercase;color:var(--rojo)">${lang==="es"?r.t:r.en}</h3><p>${lang==="es"?r.d:r.den}</p></div>`).join("")}
 
-/* ====== PEDIDO ====== */
+/* ===== PEDIDO ===== */
 function abrir(id){$("#velo").classList.add("on");$(id).classList.add("on")}
 function cerrarTodo(){$("#velo").classList.remove("on");document.querySelectorAll(".hoja").forEach(h=>h.classList.remove("on"))}
 $("#velo").onclick=cerrarTodo;document.querySelectorAll("[data-cerrar]").forEach(b=>b.onclick=cerrarTodo);
 $("#barra").onclick=()=>{pintarHoja();abrir("#hoja")};
+$("#fZona").innerHTML=ZONAS.map((z,i)=>`<option value="${i}">${z[0]} · ${cop(z[1])}</option>`).join("");
+$("#fZona").onchange=pintarHoja;
+const domi=()=>tipo==="domicilio"?ZONAS[+$("#fZona").value][1]:0;
 function pintarHoja(){
   if(!carrito.length){cerrarTodo();return}
   $("#lineas").innerHTML=carrito.map((l,i)=>`<div class="linea"><div class="nm">${lang==="es"?l.n:(l.en||l.n)}<small>${cop(l.p)} c/u</small></div><div class="cant"><button data-li="${i}" data-d="-1">−</button><span>${l.q}</span><button data-li="${i}" data-d="1">+</button></div><b>${cop(l.p*l.q)}</b></div>`).join("");
-  $("#lineas").querySelectorAll("button").forEach(b=>b.onclick=()=>{const l=carrito[+b.dataset.li];l.q+=+b.dataset.d;if(l.q<=0)carrito.splice(+b.dataset.li,1);guardarCarrito();pintarPlatos();pintarHoja()});
-  $("#cMesa").style.display=tipo==="mesa"?"":"none";
-  $("#cDir").style.display=tipo==="domicilio"?"":"none";
-  $("#avisoRecoger").style.display=tipo==="recoger"?"":"none";
-  const sub=subtotal(),domi=tipo==="domicilio"?DATA.domicilio:0,tot=sub+domi;
-  $("#rSub").textContent=cop(sub);$("#rDomiF").style.display=domi?"":"none";$("#rDomi").textContent=cop(domi);
-  $("#rAntF").style.display=tipo==="recoger"?"":"none";$("#rAnt").textContent=cop(Math.ceil(tot/2));
-  $("#rTot").textContent=cop(tot);
+  $("#lineas").querySelectorAll("button").forEach(b=>b.onclick=()=>{const i=+b.dataset.li;carrito[i].q+=+b.dataset.d;if(carrito[i].q<=0)carrito.splice(i,1);guardar();pintarPlatos();pintarHoja()});
+  $("#cMesa").style.display=tipo==="mesa"?"":"none";$("#cDir").style.display=tipo==="domicilio"?"":"none";$("#avisoRecoger").style.display=tipo==="recoger"?"":"none";
+  const sub=subtotal(),d=domi(),tot=sub+d;
+  $("#rSub").textContent=cop(sub);$("#rDomiF").style.display=d?"":"none";$("#rDomi").textContent=cop(d);
+  $("#rAntF").style.display=tipo==="recoger"?"":"none";$("#rAnt").textContent=cop(Math.ceil(tot/2));$("#rTot").textContent=cop(tot);
 }
 function seg(id,cb){$(id).querySelectorAll("button").forEach(b=>b.onclick=()=>{$(id).querySelectorAll("button").forEach(x=>x.classList.remove("on"));b.classList.add("on");cb(b.dataset.v);pintarHoja()})}
 seg("#segTipo",v=>tipo=v);seg("#segPago",v=>pago=v);
 $("#fFactura").onchange=e=>$("#cFact").style.display=e.target.checked?"":"none";
 $("#enviar").onclick=()=>{
-  const nom=$("#fNombre").value.trim();
-  if(!nom){aviso(lang==="es"?"Escribe tu nombre":"Type your name");$("#fNombre").focus();return}
-  if(tipo==="domicilio"&&!$("#fDir").value.trim()){aviso(lang==="es"?"Escribe la dirección":"Type the address");$("#fDir").focus();return}
-  const a=ahoraBog();const sub=subtotal(),domi=tipo==="domicilio"?DATA.domicilio:0;
-  const tipos={recoger:"Para recoger",mesa:"En mesa",domicilio:"Domicilio"};
-  let m=`*PEDIDO – LA PAILA CHINA*\n${a.d}/${a.mo}/${a.y} ${String(a.h).padStart(2,"0")}:${String(a.m).padStart(2,"0")} (hora Colombia)\n\n`;
-  carrito.forEach(l=>m+=`• ${l.q} x ${l.n} — ${cop(l.p*l.q)}\n`);
-  m+=`\nSubtotal: ${cop(sub)}\n`;if(domi)m+=`Domicilio: ${cop(domi)}\n`;m+=`*Total: ${cop(sub+domi)}*\n\n`;
-  m+=`Cliente: ${nom}\nServicio: ${tipos[tipo]}\n`;
+  const nom=$("#fNombre").value.trim(),es=lang==="es";
+  if(!nom){aviso(es?"Escribe tu nombre":"Type your name");$("#fNombre").focus();return}
+  if(tipo==="domicilio"&&!$("#fDir").value.trim()){aviso(es?"Escribe la dirección":"Type the address");$("#fDir").focus();return}
+  const a=ahoraBog(),sub=subtotal(),d=domi(),tipos={recoger:"Recoger en el local",mesa:"En el local",domicilio:"Domicilio"};
+  let m=`*PEDIDO · LA PAILA CHINA*\n${a.d}/${a.mo}/${a.y} ${String(a.h).padStart(2,"0")}:${String(a.m).padStart(2,"0")} (hora Colombia)\n\n`;
+  carrito.forEach(l=>m+=`- ${l.q} x ${l.n}: ${cop(l.p*l.q)}\n`);
+  m+=`\nSubtotal: ${cop(sub)}\n`;if(d)m+=`Domicilio (${ZONAS[+$("#fZona").value][0]}): ${cop(d)}\n`;m+=`*Total: ${cop(sub+d)}*\n\nCliente: ${nom}\nServicio: ${tipos[tipo]}\n`;
   if(tipo==="mesa"&&$("#fMesa").value)m+=`Mesa/personas: ${$("#fMesa").value}\n`;
-  if(tipo==="domicilio")m+=`Dirección: ${$("#fDir").value}\n`;
-  m+=`Pago: ${pago}\n`;if(tipo==="recoger")m+=`(Anticipo 50%: ${cop(Math.ceil((sub+domi)/2))})\n`;
+  if(tipo==="domicilio"){m+=`Dirección: ${$("#fDir").value}\n`;if($("#fCel").value)m+=`Celular: ${$("#fCel").value}\n`}
+  m+=`Pago: ${pago}\n`;if(tipo==="recoger")m+=`Anticipo 50%: ${cop(Math.ceil((sub+d)/2))}\n`;
   if($("#fFactura").checked)m+=`Factura a: ${$("#fNit").value||"(pendiente)"}\n`;
   if($("#fNota").value.trim())m+=`Notas: ${$("#fNota").value.trim()}\n`;
-  const url=(DATA.wa?`https://wa.me/${DATA.wa}`:"https://wa.me/")+"?text="+encodeURIComponent(m);
-  window.open(url,"_blank");
+  window.open((CONF.wa?`https://wa.me/${CONF.wa}`:"https://wa.me/")+"?text="+encodeURIComponent(m),"_blank");
 };
-$("#hoyPedir").onclick=()=>{
-  const n=DATA.dias[ahoraBog().wd];const base=DATA.platos.find(p=>p.id==="a1");const id="dia-"+n;
-  const l=carrito.find(x=>x.id===id);if(l)l.q++;else carrito.push({id,n:"Menú del día: "+n,en:"Dish of the day: "+n,p:base?base.p:15000,q:1});
-  guardarCarrito();aviso(lang==="es"?"Agregado al pedido":"Added to order");
-};
+$("#hoyPedir").onclick=()=>$("#almuerzo").scrollIntoView({behavior:"smooth"});
 
-/* ====== ADMIN ====== */
-$("#btnAdmin").onclick=()=>{
-  const pin=prompt(lang==="es"?"Clave de administrador":"Admin PIN");
-  if(pin!==(localStorage.getItem("lp_pin")||"1234"))return aviso(lang==="es"?"Clave incorrecta":"Wrong PIN");
-  pintarAdmin();abrir("#hojaAdmin");
-};
-function pintarAdmin(){
-  $("#aWa").value=DATA.wa||"";$("#aDomi").value=DATA.domicilio;
-  $("#aDias").innerHTML=DIAS.es.map((d,i)=>`<div class="admin-lista"><div class="it" style="grid-template-columns:110px 1fr"><b style="align-self:center">${d}</b><input data-dia="${i}" value="${DATA.dias[i]||""}"></div></div>`).join("");
-  $("#aLista").innerHTML=DATA.platos.map((p,i)=>`<div class="it"><input data-k="n" data-i="${i}" value="${p.n}"><input data-k="p" data-i="${i}" inputmode="numeric" value="${p.p}"><button class="mini" data-del="${i}">×</button>
-  <select data-k="cat" data-i="${i}" style="grid-column:1/4">${DATA.categorias.map(c=>`<option value="${c}" ${c===p.cat?"selected":""}>${CATN.es[c]}</option>`).join("")}</select></div>`).join("");
-  $("#aLista").querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{leerAdmin();DATA.platos.splice(+b.dataset.del,1);pintarAdmin()});
-}
-function leerAdmin(){
-  DATA.wa=$("#aWa").value.replace(/\D/g,"");DATA.domicilio=+$("#aDomi").value.replace(/\D/g,"")||0;
-  document.querySelectorAll("[data-dia]").forEach(x=>DATA.dias[+x.dataset.dia]=x.value);
-  document.querySelectorAll("#aLista [data-k]").forEach(x=>{const p=DATA.platos[+x.dataset.i];const k=x.dataset.k;p[k]=k==="p"?(+x.value.replace(/\D/g,"")||0):x.value;if(k==="n")p.en=p.en&&p.en!==p.n?p.en:x.value});
-}
-$("#aNuevo").onclick=()=>{leerAdmin();DATA.platos.push({id:"x"+Date.now(),cat:"almuerzos",n:"Nuevo plato",p:0,d:""});pintarAdmin()};
-$("#aGuardar").onclick=()=>{leerAdmin();localStorage.setItem("lp_data",JSON.stringify(DATA));cerrarTodo();todo();aviso(lang==="es"?"Menú guardado":"Menu saved")};
-$("#aReset").onclick=()=>{if(confirm("¿Volver al menú base?")){localStorage.removeItem("lp_data");DATA=cargar();pintarAdmin();todo()}};
+/* ===== ADMIN ===== */
+$("#btnAdmin").onclick=()=>{const pin=prompt(lang==="es"?"Clave de administrador":"Admin PIN");if(pin!==(localStorage.getItem("lp_pin")||"1234"))return aviso(lang==="es"?"Clave incorrecta":"Wrong PIN");pintarAdmin();abrir("#hojaAdmin")};
+function pintarAdmin(){$("#aWa").value=CONF.wa;$("#aAgot").innerHTML=PROT.map(p=>`<button class="mini" style="${agot.has(p.n)?"background:#141010;color:#fff;text-decoration:line-through":""}" data-p="${p.n}">${p.n}</button>`).join("");
+  $("#aAgot").querySelectorAll("button").forEach(b=>b.onclick=()=>{const n=b.dataset.p;agot.has(n)?agot.delete(n):agot.add(n);pintarAdmin()})}
+$("#aGuardar").onclick=()=>{CONF.wa=$("#aWa").value.replace(/\D/g,"");localStorage.setItem("lp_wa",CONF.wa);localStorage.setItem("lp_agot_"+hoyKey(),JSON.stringify([...agot]));cerrarTodo();todo();aviso(lang==="es"?"Guardado":"Saved")};
 
-/* ====== UTIL ====== */
 let tt;function aviso(t){const e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>e.classList.remove("on"),1800)}
-function todo(){pintarTextos();pintarHoy();pintarTabs();pintarPlatos();pintarArmador();pintarRes();pintarBarra()}
+function todo(){pintarTextos();pintarHoy();pintarAlm();pintarTabs();pintarPlatos();pintarRes();pintarBarra()}
 $("#lgES").onclick=()=>{lang="es";localStorage.setItem("lp_lang",lang);todo()};
 $("#lgEN").onclick=()=>{lang="en";localStorage.setItem("lp_lang",lang);todo()};
-
-/* Hero: fotos que rotan */
-let hi=0;const bgs=document.querySelectorAll(".hero .bg");
-setInterval(()=>{bgs[hi].classList.remove("on");hi=(hi+1)%bgs.length;bgs[hi].classList.add("on")},6000);
+let hi=0;const bgs=document.querySelectorAll(".hero .bg");setInterval(()=>{bgs[hi].classList.remove("on");hi=(hi+1)%bgs.length;bgs[hi].classList.add("on")},6000);
 setInterval(pintarHoy,20000);
-
-/* PWA */
 let evInst;window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();evInst=e;$("#btnInstalar").classList.add("on")});
 $("#btnInstalar").onclick=async()=>{if(!evInst)return;evInst.prompt();await evInst.userChoice;evInst=null;$("#btnInstalar").classList.remove("on")};
 if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
-
 todo();
 </script>
 </body>

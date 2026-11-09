@@ -15,13 +15,13 @@
 <meta property="og:url" content="https://paila-china.netlify.app/">
 <meta property="og:title" content="La Paila China · ¡Prende la paila!">
 <meta property="og:description" content="Cocina casera y arroz chino en Caucasia. Arma tu pedido y envíalo por WhatsApp.">
-<meta property="og:image" content="https://paila-china.netlify.app/img/og.jpg?v=2">
+<meta property="og:image" content="https://paila-china.netlify.app/img/og.jpg?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="La Paila China · ¡Prende la paila!">
 <meta name="twitter:description" content="Cocina casera y arroz chino en Caucasia. Arma tu pedido y envíalo por WhatsApp.">
-<meta name="twitter:image" content="https://paila-china.netlify.app/img/og.jpg?v=2">
+<meta name="twitter:image" content="https://paila-china.netlify.app/img/og.jpg?v=3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -35,7 +35,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 a{color:inherit}
 /* Barra superior */
 .top{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(20,16,16,.92);backdrop-filter:blur(8px);color:#fff}
-.top img{width:38px;height:38px;border-radius:50%;object-fit:cover;background:#fff}
+.top img.logo-top{height:44px;width:auto}
 .top .marca{flex:1;font-family:"Barlow Condensed";font-weight:800;font-size:20px;text-transform:uppercase}
 .top .marca small{display:block;font-family:Barlow;font-weight:500;font-size:11px;opacity:.75;text-transform:none}
 .pill{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 11px;font-size:13px;font-weight:600}
@@ -51,6 +51,7 @@ a{color:inherit}
 .punto{width:9px;height:9px;border-radius:50%;background:#999}
 .punto.abierto{background:#3ee07a;box-shadow:0 0 0 0 rgba(62,224,122,.7);animation:pulso 1.6s infinite}
 @keyframes pulso{to{box-shadow:0 0 0 12px rgba(62,224,122,0)}}
+.logo-hero{width:min(300px,62vw);margin-bottom:14px;filter:drop-shadow(0 6px 18px rgba(0,0,0,.6))}
 .hero h1{font-size:clamp(44px,12vw,84px);line-height:.9;text-transform:uppercase;margin:12px 0 6px}
 .hero h1 span{color:var(--oro)}
 .hero p{font-size:17px;max-width:520px;opacity:.95}
@@ -135,6 +136,13 @@ h2{font-size:34px;text-transform:uppercase;line-height:1;margin:4px 0 14px}
 .datos .l b{display:block;font-size:12px;text-transform:uppercase;color:var(--rojo);letter-spacing:1px}
 .horario td{padding:4px 12px 4px 0}
 .horario tr.hoyd td{font-weight:800;color:var(--rojo)}
+/* Local */
+.locales{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:820px){.locales{grid-template-columns:repeat(4,1fr)}}
+.locales figure{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:#222}
+.locales img{width:100%;height:100%;object-fit:cover;transition:transform 5s ease}
+.locales figure:hover img{transform:scale(1.1)}
+.locales figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 10px 10px;background:linear-gradient(transparent,rgba(0,0,0,.85));color:#fff;font-weight:700;font-size:14px;line-height:1.2}
 /* Reseñas */
 .resenas{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
 .res{scroll-snap-align:start;min-width:270px;max-width:300px;background:#fff;border:1px solid var(--borde);border-radius:16px;padding:16px}
@@ -190,8 +198,8 @@ footer a{color:var(--oro)}
 <body>
 
 <header class="top">
-  <img src="https://lapailachina.com/icons/logo.png" alt="La Paila China" onerror="this.src='icon-192.png'">
-  <div class="marca">La Paila China<small data-t="tagTop">Cocina casera & arroz chino</small></div>
+  <img src="img/logo.png" alt="La Paila China" class="logo-top">
+  <div class="marca"><small data-t="tagTop">Cocina casera & arroz chino</small></div>
   <button class="pill instalar" id="btnInstalar" data-t="instalar">Instalar</button>
   <button class="pill on" id="lgES">ES</button>
   <button class="pill" id="lgEN">EN</button>
@@ -207,6 +215,7 @@ footer a{color:var(--oro)}
   <div class="bg" style="background-image:url(img/chopsuey.jpg)"></div>
   <div class="bg" style="background-image:url(img/fachada.jpg)"></div>
   <div class="txt">
+    <img src="img/logo.png" alt="La Paila China" class="logo-hero">
     <span class="estado"><span class="punto" id="punto"></span><span id="estadoTxt">…</span></span>
     <h1><span data-t="heroA">¡Prende</span><br><span data-t="heroB" style="color:#fff">la paila!</span></h1>
     <p data-t="heroP">Sabor casero, recién salido de la paila. Almuerzos, arroz chino a tu gusto, porciones y desayunos en Caucasia.</p>
@@ -274,6 +283,17 @@ footer a{color:var(--oro)}
   <div class="ctas"><a class="btn borde" target="_blank" rel="noopener" href="https://search.google.com/local/writereview?placeid=ChIJy38noh9vW44R1UKvhGKTbnE" data-t="dejarRes">Deja tu reseña en Google</a></div>
 </section>
 
+<section id="local">
+  <div class="kicker" data-t="kLocal">Así se vive La Paila</div>
+  <h2 data-t="tLocal">Siempre lleno, siempre caliente</h2>
+  <div class="locales">
+    <figure><img src="img/local-comedor.jpg" alt="Comedor" loading="lazy"><figcaption data-t="cComedor">El comedor a la hora del almuerzo</figcaption></figure>
+    <figure><img src="img/local-fila.jpg" alt="Entrada" loading="lazy"><figcaption data-t="cFila">Pide desde la app y evita la fila</figcaption></figure>
+    <figure><img src="img/local-cocina.jpg" alt="Cocina" loading="lazy"><figcaption data-t="cCocina">Tu pedido sale caliente de la cocina</figcaption></figure>
+    <figure><img src="img/local-domicilio.jpg" alt="Domicilio" loading="lazy"><figcaption data-t="cDomi">Y llega a tu puerta</figcaption></figure>
+  </div>
+</section>
+
 <section id="visita">
   <div class="kicker" data-t="kVis">Ven por tu plato</div>
   <h2 data-t="tVis">Visítanos</h2>
@@ -295,7 +315,7 @@ footer a{color:var(--oro)}
 </section>
 
 <footer>
-  <div><b>La Paila China</b> · <span data-t="pieA">Hecho con sazón de hogar</span></div>
+  <img src="img/logo.png" alt="La Paila China" style="height:70px;width:auto;margin:0 auto 8px"><div><span data-t="pieA">Hecho con sazón de hogar</span></div>
   <div style="margin-top:10px">Desarrollada por <b>Vibras Positivas HM</b> — Derechos de Autor Reservados</div>
   <div style="margin-top:6px"><a href="https://vibraspositivashm.com" target="_blank" rel="noopener">vibraspositivashm.com</a> · WhatsApp 311 770 0431</div>
   <div style="margin-top:14px"><button class="mini" id="btnAdmin" style="background:transparent;color:#8d837b;border-color:#3a3330" data-t="admin">Administrar menú</button></div>
@@ -407,7 +427,7 @@ const RAZONES=[
 ];
 const HOR={lv:[8,21],sd:[8,22]};
 
-const T={en:{tagTop:"Homestyle cooking & Chinese rice",instalar:"Install",heroA:"Fire up",heroB:"the wok!",heroP:"Homestyle flavor, fresh from the paila. Lunches, Chinese rice, portions and breakfasts in Caucasia.",verMenu:"See the menu and order",comoLlegar:"How to get here",kHoy:"Today in the paila",platoDia:"Today's lunch",loQuiero:"Build my lunch",hHoy:"Today's hours",hCierra:"Closes in",hServicio:"Service",hServVal:"Dine-in · Pickup · Delivery",hDomi:"Delivery",hPago:"Payment",hPagoVal:"Cash · Transfer · QR · Card",kAlm:"Made with home flavor",tAlm:"Build your lunch",pAlm:"Main plate: the protein you pick with rice, plantain, salad, beans and juice. Add a soup and it's a full lunch.",gProt:"1. Protein",gSopa:"2. Soup (optional)",kMenu:"The menu",tMenu:"Anything else?",agregar:"Add to order",kRes:"Tried it already?",tRes:"Tell us how it was",dejarRes:"Leave your Google review",kVis:"Come get your plate",tVis:"Visit us",dDir:"Address",dTel:"Delivery phones",dHor:"Hours",abrirMapa:"Open in maps",pieA:"Made with home flavor",admin:"Manage menu",verPedido:"View my order",cerrar:"Close",kPed:"Your order",tPed:"Confirm and send",lTipo:"How do you want it?",oRecoger:"Pickup",oMesa:"Dine-in",oDomi:"Delivery",lNombre:"Your name",lMesa:"Table or number of people (optional)",lZona:"Delivery zone",zonaNota:"Other zones pay the difference.",lDir:"Delivery address",lCel:"Contact phone",lPago:"Payment method",pEf:"Cash",pTr:"Transfer",pTa:"Card",avisoRec:"Pickup orders are paid in full or with a 50% deposit by bank transfer.",lNota:"Notes for the kitchen",lFact:"I need an invoice",lNit:"Name or company and tax ID",rAnt:"50% deposit",enviar:"Send order via WhatsApp",priv:"Your data is only used for this order and is not stored on any server (Colombian Law 1581 of 2012).",tAdm:"Today's menu",lWa:"Restaurant WhatsApp (with 57)",lAgot:"Tap what is sold out today",guardar:"Save",admNota:"Saved on this phone."}};
+const T={en:{tagTop:"Homestyle cooking & Chinese rice",instalar:"Install",heroA:"Fire up",heroB:"the wok!",heroP:"Homestyle flavor, fresh from the paila. Lunches, Chinese rice, portions and breakfasts in Caucasia.",verMenu:"See the menu and order",comoLlegar:"How to get here",kHoy:"Today in the paila",platoDia:"Today's lunch",loQuiero:"Build my lunch",hHoy:"Today's hours",hCierra:"Closes in",hServicio:"Service",hServVal:"Dine-in · Pickup · Delivery",hDomi:"Delivery",hPago:"Payment",hPagoVal:"Cash · Transfer · QR · Card",kAlm:"Made with home flavor",tAlm:"Build your lunch",pAlm:"Main plate: the protein you pick with rice, plantain, salad, beans and juice. Add a soup and it's a full lunch.",gProt:"1. Protein",gSopa:"2. Soup (optional)",kMenu:"The menu",tMenu:"Anything else?",agregar:"Add to order",kRes:"Tried it already?",tRes:"Tell us how it was",dejarRes:"Leave your Google review",kVis:"Come get your plate",tVis:"Visit us",dDir:"Address",dTel:"Delivery phones",kLocal:"Life at La Paila",tLocal:"Always full, always hot",cComedor:"The dining room at lunchtime",cFila:"Order from the app and skip the line",cCocina:"Your order comes hot from the kitchen",cDomi:"And arrives at your door",dHor:"Hours",abrirMapa:"Open in maps",pieA:"Made with home flavor",admin:"Manage menu",verPedido:"View my order",cerrar:"Close",kPed:"Your order",tPed:"Confirm and send",lTipo:"How do you want it?",oRecoger:"Pickup",oMesa:"Dine-in",oDomi:"Delivery",lNombre:"Your name",lMesa:"Table or number of people (optional)",lZona:"Delivery zone",zonaNota:"Other zones pay the difference.",lDir:"Delivery address",lCel:"Contact phone",lPago:"Payment method",pEf:"Cash",pTr:"Transfer",pTa:"Card",avisoRec:"Pickup orders are paid in full or with a 50% deposit by bank transfer.",lNota:"Notes for the kitchen",lFact:"I need an invoice",lNit:"Name or company and tax ID",rAnt:"50% deposit",enviar:"Send order via WhatsApp",priv:"Your data is only used for this order and is not stored on any server (Colombian Law 1581 of 2012).",tAdm:"Today's menu",lWa:"Restaurant WhatsApp (with 57)",lAgot:"Tap what is sold out today",guardar:"Save",admNota:"Saved on this phone."}};
 const CATN={es:{porciones:"Porciones",arroz:"Arroz chino",desayunos:"Desayunos"},en:{porciones:"Portions",arroz:"Chinese rice",desayunos:"Breakfasts"}};
 const DIAS={es:["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"],en:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]};
 

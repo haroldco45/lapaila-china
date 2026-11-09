@@ -19,6 +19,6 @@ Menú digital con pedidos por WhatsApp para **La Paila China**, cocina casera y 
 2. Confirmar precios con el restaurante (constantes `PROT`, `SOPAS`, `MENU`, `ZONAS`).
 
 ## Publicar
-Repo `haroldco45/lapaila-china` → Netlify: https://lapaila-china.netlify.app
+Repo `haroldco45/lapaila-china` → Netlify: https://paila-china.netlify.app
 
 Desarrollada por Vibras Positivas HM — Derechos de Autor Reservados · vibraspositivashm.com

@@ -15,7 +15,7 @@ Menú digital con pedidos por WhatsApp para **La Paila China**, cocina casera y 
 - Instalable (manifest + service worker) y vista previa del enlace (Open Graph).
 
 ## Antes de publicar
-1. Poner el WhatsApp del restaurante en `CONF.wa` dentro de `index.html` (formato `57300…`).
+1. WhatsApp de pedidos: `CONF.wa` = 573122967241 (número de domicilios del aviso; confirmar que tenga WhatsApp).
 2. Confirmar precios con el restaurante (constantes `PROT`, `SOPAS`, `MENU`, `ZONAS`).
 
 ## Publicar

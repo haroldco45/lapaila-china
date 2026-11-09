@@ -204,6 +204,8 @@ footer a{color:var(--oro)}
   <div class="bg" style="background-image:url(img/posta.jpg)"></div>
   <div class="bg" style="background-image:url(img/pechuga.jpg)"></div>
   <div class="bg" style="background-image:url(img/cerdo.jpg)"></div>
+  <div class="bg" style="background-image:url(img/chopsuey.jpg)"></div>
+  <div class="bg" style="background-image:url(img/fachada.jpg)"></div>
   <div class="txt">
     <span class="estado"><span class="punto" id="punto"></span><span id="estadoTxt">…</span></span>
     <h1><span data-t="heroA">¡Prende</span><br><span data-t="heroB" style="color:#fff">la paila!</span></h1>
@@ -276,10 +278,11 @@ footer a{color:var(--oro)}
   <div class="kicker" data-t="kVis">Ven por tu plato</div>
   <h2 data-t="tVis">Visítanos</h2>
   <div class="visita">
-    <div class="fachada"><img src="https://lapailachina.com/demo/fachada.jpg" alt="Fachada La Paila China" onerror="this.remove()"></div>
+    <div class="fachada"><img src="img/fachada.jpg" alt="Fachada La Paila China"></div>
     <div class="datos">
       <h3>La Paila China</h3>
       <div class="l"><b data-t="dDir">Dirección</b>Cl. 11a #21-68, Barrio El Triángulo, Caucasia, Antioquia</div>
+      <div class="l"><b data-t="dTel">Domicilios</b><a href="tel:6048395202">839 5202</a> · <a href="tel:+573122967241">312 296 7241</a></div>
       <div class="l"><b data-t="dHor">Horario</b>
         <table class="horario" id="tablaHor"></table>
       </div>
@@ -362,35 +365,35 @@ footer a{color:var(--oro)}
 /* ===== MENÚ REAL (tomado de lapailachina.com, nov 2026) ===== */
 const IMG="https://lapailachina.com/";
 const SRC=p=>p.startsWith("img/")?p:IMG+p;
-const CONF={wa:""}; // WhatsApp del restaurante, ej. 573001234567
+const CONF={wa:"573122967241"}; // número de domicilios del aviso // WhatsApp del restaurante, ej. 573001234567
 const PROT=[
  {n:"Res",en:"Beef",img:"img/res.jpg"},{n:"Cerdo",en:"Pork",img:"img/cerdo.jpg"},{n:"Pechuga",en:"Chicken breast",img:"img/pechuga.jpg"},
  {n:"Sobrebarriga",en:"Flank steak",img:"api/menu?img=imw7a5e54rdzs&v=1794108955944"},{n:"Posta",en:"Beef round",img:"img/posta.jpg"},
  {n:"Carne desmechada",en:"Shredded beef"},{n:"Pollo desmechado",en:"Shredded chicken"},{n:"Costilla BBQ",en:"BBQ ribs",img:"demo/costillas.jpg"},
  {n:"Pollo sudado",en:"Stewed chicken",img:"demo/pollo.jpg"},{n:"Albóndigas",en:"Meatballs",img:"demo/albondigas.jpg"},{n:"Chicharrón",en:"Pork crackling",img:"img/chicharron.jpg"},
- {n:"Róbalo",en:"Snook fish"},{n:"Hígado encebollado",en:"Liver and onions"},{n:"Carne molida",en:"Ground beef",img:"api/menu?img=imw7a58x4b0om&v=1794108949188"}
+ {n:"Róbalo",en:"Snook fish"},{n:"Hígado encebollado",en:"Liver and onions"},{n:"Carne molida",en:"Ground beef",img:"img/carne-molida.jpg"}
 ];
 const SECO=15000;
 const SOPAS=[{n:"Sin sopa",en:"No soup",p:0},{n:"Frijoles",en:"Beans",p:20000},{n:"Mondongo",en:"Tripe soup",p:21000},{n:"Sopa de gallina",en:"Hen soup",p:21000},{n:"Sopa de res",en:"Beef soup",p:20000}];
 const CATS=["porciones","arroz","desayunos"];
 const MENU=[
- {id:"p1",cat:"porciones",n:"Sopa o frijoles",en:"Soup or beans",d:"Porción adicional. Solo salen las sopas de hoy.",den:"Extra portion. Only today's soups.",img:"api/menu?img=imw7a5ybu533y&v=1794108982105",
+ {id:"p1",cat:"porciones",n:"Sopa o frijoles",en:"Soup or beans",d:"Porción adicional. Solo salen las sopas de hoy.",den:"Extra portion. Only today's soups.",img:"img/sopa.jpg",
   ops:[["Frijoles · Pequeña","Beans · Small",10000],["Frijoles · Grande","Beans · Large",15000],["Mondongo · Pequeña","Tripe · Small",11000],["Mondongo · Grande","Tripe · Large",16000],["Gallina · Pequeña","Hen · Small",11000],["Gallina · Grande","Hen · Large",16000],["Res · Pequeña","Beef · Small",10000],["Res · Grande","Beef · Large",15000]]},
  {id:"p2",cat:"porciones",n:"Arroz",en:"Rice",d:"Porción adicional de arroz.",den:"Extra portion of rice.",p:3000},
  {id:"r1",cat:"arroz",n:"Arroz chino",en:"Chinese rice",d:"Salteado en la paila. Elige el tamaño según cuántos sean.",den:"Stir-fried in the paila. Pick the size for your group.",img:"demo/arrozchino.jpg",
   ops:[["Personal","Single",17000],["2 personas","2 people",23000],["4 personas","4 people",32000],["6 personas","6 people",40000],["9 personas","9 people",50000]]},
- {id:"r2",cat:"arroz",n:"Chop suey",en:"Chop suey",d:"El acompañante perfecto para cualquier plato.",den:"The perfect side for any dish.",img:"demo/chopsuey.jpg",
+ {id:"r2",cat:"arroz",n:"Chop suey",en:"Chop suey",d:"El acompañante perfecto para cualquier plato.",den:"The perfect side for any dish.",img:"img/chopsuey.jpg",
   ops:[["Pequeño","Small",7000],["Mediano","Medium",12000],["Grande","Large",17000]]},
  {id:"r3",cat:"arroz",n:"Combo 1 pollo + arroz mega",en:"Whole chicken + mega rice",d:"El más grande, para los más hambrientos.",den:"The biggest one, for the hungriest.",p:73000,img:"demo/pollo.jpg"},
  {id:"r4",cat:"arroz",n:"Combo 1 pollo + arroz grande",en:"Whole chicken + large rice",d:"Pollo entero con arroz chino grande.",den:"Whole chicken with large Chinese rice.",p:63000},
  {id:"r5",cat:"arroz",n:"Combo ½ pollo + arroz mediano",en:"Half chicken + medium rice",d:"Ideal para compartir entre dos.",den:"Great to share between two.",p:45000},
  {id:"r6",cat:"arroz",n:"Combo ¼ pollo + arroz",en:"Quarter chicken + rice",d:"Un cuarto de pollo con arroz chino.",den:"Quarter chicken with Chinese rice.",p:31000},
  {id:"r7",cat:"arroz",n:"Combo 1 presa + arroz personal",en:"1 piece + single rice",d:"Una presa de pollo con arroz personal.",den:"One chicken piece with single rice.",p:22000},
- {id:"r8",cat:"arroz",n:"Combo 1 presa + arroz + chop suey",en:"1 piece + rice + chop suey",d:"El completo, con chop suey incluido.",den:"The full one, chop suey included.",p:25000,img:"demo/chopsuey.jpg"},
- {id:"d1",cat:"desayunos",n:"Combo completo",en:"Full breakfast",d:"Desayuno completo. Elige con carne o sin carne.",den:"Full breakfast, with or without meat.",ops:[["Con carne","With meat",20000],["Sin carne","No meat",13000]]},
- {id:"d2",cat:"desayunos",n:"Calentado",en:"Calentado",d:"El de siempre.",den:"The classic.",p:5000},
- {id:"d3",cat:"desayunos",n:"Arepa",en:"Arepa",d:"",den:"",p:1500},
- {id:"d4",cat:"desayunos",n:"Huevos",en:"Eggs",d:"Ármalo a tu gusto.",den:"Your way.",ops:[["Huevo frito","Fried egg",1500],["Huevos revueltos","Scrambled eggs",4000],["Huevos con aliño","Eggs with hogao",5000],["Huevo ranchero","Ranch-style egg",6000]]},
+ {id:"r8",cat:"arroz",n:"Combo 1 presa + arroz + chop suey",en:"1 piece + rice + chop suey",d:"El completo, con chop suey incluido.",den:"The full one, chop suey included.",p:25000,img:"img/chopsuey.jpg"},
+ {id:"d1",cat:"desayunos",n:"Combo completo",en:"Full breakfast",d:"Desayuno completo. Elige con carne o sin carne.",den:"Full breakfast, with or without meat.",img:"img/desayuno-chicharron.jpg",ops:[["Con carne","With meat",20000],["Sin carne","No meat",13000]]},
+ {id:"d2",cat:"desayunos",n:"Calentado",en:"Calentado",d:"El de siempre.",den:"The classic.",p:5000,img:"img/desayuno.jpg"},
+ {id:"d3",cat:"desayunos",n:"Arepa",en:"Arepa",d:"",den:"",p:1500,img:"img/desayuno-chicharron.jpg"},
+ {id:"d4",cat:"desayunos",n:"Huevos",en:"Eggs",d:"Ármalo a tu gusto.",den:"Your way.",img:"img/desayuno.jpg",ops:[["Huevo frito","Fried egg",1500],["Huevos revueltos","Scrambled eggs",4000],["Huevos con aliño","Eggs with hogao",5000],["Huevo ranchero","Ranch-style egg",6000]]},
  {id:"d5",cat:"desayunos",n:"Carnes",en:"Meats",d:"Ármalo a tu gusto.",den:"Your way.",img:"img/res.jpg",ops:[["Pollo desmechado","Shredded chicken",8000],["Res desmechada","Shredded beef",10000],["Cerdo","Pork",10000],["Res","Beef",10000],["Chicharrón","Pork crackling",10000]]},
  {id:"d6",cat:"desayunos",n:"Queso",en:"Cheese",d:"",den:"",ops:[["Queso","Cheese",4000],["Queso rallado","Grated cheese",4000]]},
  {id:"d7",cat:"desayunos",n:"Acompañantes",en:"Sides",d:"Ármalo a tu gusto.",den:"Your way.",ops:[["Chorizo","Chorizo",2500],["Salchicha","Sausage",2000],["Patacón","Patacón",5000],["Aliños","Hogao",2000]]},
@@ -404,7 +407,7 @@ const RAZONES=[
 ];
 const HOR={lv:[8,21],sd:[8,22]};
 
-const T={en:{tagTop:"Homestyle cooking & Chinese rice",instalar:"Install",heroA:"Fire up",heroB:"the wok!",heroP:"Homestyle flavor, fresh from the paila. Lunches, Chinese rice, portions and breakfasts in Caucasia.",verMenu:"See the menu and order",comoLlegar:"How to get here",kHoy:"Today in the paila",platoDia:"Today's lunch",loQuiero:"Build my lunch",hHoy:"Today's hours",hCierra:"Closes in",hServicio:"Service",hServVal:"Dine-in · Pickup · Delivery",hDomi:"Delivery",hPago:"Payment",hPagoVal:"Cash · Transfer · QR · Card",kAlm:"Made with home flavor",tAlm:"Build your lunch",pAlm:"Main plate: the protein you pick with rice, plantain, salad, beans and juice. Add a soup and it's a full lunch.",gProt:"1. Protein",gSopa:"2. Soup (optional)",kMenu:"The menu",tMenu:"Anything else?",agregar:"Add to order",kRes:"Tried it already?",tRes:"Tell us how it was",dejarRes:"Leave your Google review",kVis:"Come get your plate",tVis:"Visit us",dDir:"Address",dHor:"Hours",abrirMapa:"Open in maps",pieA:"Made with home flavor",admin:"Manage menu",verPedido:"View my order",cerrar:"Close",kPed:"Your order",tPed:"Confirm and send",lTipo:"How do you want it?",oRecoger:"Pickup",oMesa:"Dine-in",oDomi:"Delivery",lNombre:"Your name",lMesa:"Table or number of people (optional)",lZona:"Delivery zone",zonaNota:"Other zones pay the difference.",lDir:"Delivery address",lCel:"Contact phone",lPago:"Payment method",pEf:"Cash",pTr:"Transfer",pTa:"Card",avisoRec:"Pickup orders are paid in full or with a 50% deposit by bank transfer.",lNota:"Notes for the kitchen",lFact:"I need an invoice",lNit:"Name or company and tax ID",rAnt:"50% deposit",enviar:"Send order via WhatsApp",priv:"Your data is only used for this order and is not stored on any server (Colombian Law 1581 of 2012).",tAdm:"Today's menu",lWa:"Restaurant WhatsApp (with 57)",lAgot:"Tap what is sold out today",guardar:"Save",admNota:"Saved on this phone."}};
+const T={en:{tagTop:"Homestyle cooking & Chinese rice",instalar:"Install",heroA:"Fire up",heroB:"the wok!",heroP:"Homestyle flavor, fresh from the paila. Lunches, Chinese rice, portions and breakfasts in Caucasia.",verMenu:"See the menu and order",comoLlegar:"How to get here",kHoy:"Today in the paila",platoDia:"Today's lunch",loQuiero:"Build my lunch",hHoy:"Today's hours",hCierra:"Closes in",hServicio:"Service",hServVal:"Dine-in · Pickup · Delivery",hDomi:"Delivery",hPago:"Payment",hPagoVal:"Cash · Transfer · QR · Card",kAlm:"Made with home flavor",tAlm:"Build your lunch",pAlm:"Main plate: the protein you pick with rice, plantain, salad, beans and juice. Add a soup and it's a full lunch.",gProt:"1. Protein",gSopa:"2. Soup (optional)",kMenu:"The menu",tMenu:"Anything else?",agregar:"Add to order",kRes:"Tried it already?",tRes:"Tell us how it was",dejarRes:"Leave your Google review",kVis:"Come get your plate",tVis:"Visit us",dDir:"Address",dTel:"Delivery phones",dHor:"Hours",abrirMapa:"Open in maps",pieA:"Made with home flavor",admin:"Manage menu",verPedido:"View my order",cerrar:"Close",kPed:"Your order",tPed:"Confirm and send",lTipo:"How do you want it?",oRecoger:"Pickup",oMesa:"Dine-in",oDomi:"Delivery",lNombre:"Your name",lMesa:"Table or number of people (optional)",lZona:"Delivery zone",zonaNota:"Other zones pay the difference.",lDir:"Delivery address",lCel:"Contact phone",lPago:"Payment method",pEf:"Cash",pTr:"Transfer",pTa:"Card",avisoRec:"Pickup orders are paid in full or with a 50% deposit by bank transfer.",lNota:"Notes for the kitchen",lFact:"I need an invoice",lNit:"Name or company and tax ID",rAnt:"50% deposit",enviar:"Send order via WhatsApp",priv:"Your data is only used for this order and is not stored on any server (Colombian Law 1581 of 2012).",tAdm:"Today's menu",lWa:"Restaurant WhatsApp (with 57)",lAgot:"Tap what is sold out today",guardar:"Save",admNota:"Saved on this phone."}};
 const CATN={es:{porciones:"Porciones",arroz:"Arroz chino",desayunos:"Desayunos"},en:{porciones:"Portions",arroz:"Chinese rice",desayunos:"Breakfasts"}};
 const DIAS={es:["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"],en:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]};
 

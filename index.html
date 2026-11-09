@@ -15,11 +15,13 @@
 <meta property="og:url" content="https://lapaila-china.netlify.app/">
 <meta property="og:title" content="La Paila China · ¡Prende la paila!">
 <meta property="og:description" content="Cocina casera y arroz chino en Caucasia. Arma tu pedido y envíalo por WhatsApp.">
-<meta property="og:image" content="https://lapailachina.com/icons/og.jpg">
+<meta property="og:image" content="https://lapaila-china.netlify.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="La Paila China · ¡Prende la paila!">
 <meta name="twitter:description" content="Cocina casera y arroz chino en Caucasia. Arma tu pedido y envíalo por WhatsApp.">
-<meta name="twitter:image" content="https://lapailachina.com/icons/og.jpg">
+<meta name="twitter:image" content="https://lapaila-china.netlify.app/img/og.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -196,11 +198,12 @@ footer a{color:var(--oro)}
 </header>
 
 <div class="hero" id="hero">
-  <div class="bg on" style="background-image:url(https://lapailachina.com/demo/arrozchino.jpg)"></div>
-  <div class="bg" style="background-image:url(https://lapailachina.com/demo/chicharron.jpg)"></div>
-  <div class="bg" style="background-image:url(https://lapailachina.com/demo/chopsuey.jpg)"></div>
-  <div class="bg" style="background-image:url(https://lapailachina.com/demo/almuerzo.jpg)"></div>
-  <div class="bg" style="background-image:url(https://lapailachina.com/demo/fachada.jpg)"></div>
+  <div class="bg on" style="background-image:url(img/almuerzo-completo.jpg)"></div>
+  <div class="bg" style="background-image:url(img/chicharron.jpg)"></div>
+  <div class="bg" style="background-image:url(img/res.jpg)"></div>
+  <div class="bg" style="background-image:url(img/posta.jpg)"></div>
+  <div class="bg" style="background-image:url(img/pechuga.jpg)"></div>
+  <div class="bg" style="background-image:url(img/cerdo.jpg)"></div>
   <div class="txt">
     <span class="estado"><span class="punto" id="punto"></span><span id="estadoTxt">…</span></span>
     <h1><span data-t="heroA">¡Prende</span><br><span data-t="heroB" style="color:#fff">la paila!</span></h1>
@@ -219,7 +222,7 @@ footer a{color:var(--oro)}
   <h2 id="hoyTitulo">Menú de hoy</h2>
   <div class="hoy">
     <div class="hoy-card">
-      <img src="https://lapailachina.com/demo/almuerzo.jpg" alt="Almuerzo del día" onerror="this.remove()">
+      <img src="img/almuerzo-completo.jpg" alt="Almuerzo del día">
       <div class="in">
         <span class="tag" data-t="platoDia">Almuerzo de hoy</span>
         <h3 id="hoyPlato">—</h3>
@@ -358,12 +361,13 @@ footer a{color:var(--oro)}
 <script>
 /* ===== MENÚ REAL (tomado de lapailachina.com, nov 2026) ===== */
 const IMG="https://lapailachina.com/";
+const SRC=p=>p.startsWith("img/")?p:IMG+p;
 const CONF={wa:""}; // WhatsApp del restaurante, ej. 573001234567
 const PROT=[
- {n:"Res",en:"Beef",img:"demo/carne.jpg"},{n:"Cerdo",en:"Pork",img:"demo/cerdo.jpg"},{n:"Pechuga",en:"Chicken breast",img:"demo/pechuga.jpg"},
- {n:"Sobrebarriga",en:"Flank steak",img:"api/menu?img=imw7a5e54rdzs&v=1794108955944"},{n:"Posta",en:"Beef round",img:"demo/posta.jpg"},
+ {n:"Res",en:"Beef",img:"img/res.jpg"},{n:"Cerdo",en:"Pork",img:"img/cerdo.jpg"},{n:"Pechuga",en:"Chicken breast",img:"img/pechuga.jpg"},
+ {n:"Sobrebarriga",en:"Flank steak",img:"api/menu?img=imw7a5e54rdzs&v=1794108955944"},{n:"Posta",en:"Beef round",img:"img/posta.jpg"},
  {n:"Carne desmechada",en:"Shredded beef"},{n:"Pollo desmechado",en:"Shredded chicken"},{n:"Costilla BBQ",en:"BBQ ribs",img:"demo/costillas.jpg"},
- {n:"Pollo sudado",en:"Stewed chicken",img:"demo/pollo.jpg"},{n:"Albóndigas",en:"Meatballs",img:"demo/albondigas.jpg"},{n:"Chicharrón",en:"Pork crackling",img:"demo/chicharron.jpg"},
+ {n:"Pollo sudado",en:"Stewed chicken",img:"demo/pollo.jpg"},{n:"Albóndigas",en:"Meatballs",img:"demo/albondigas.jpg"},{n:"Chicharrón",en:"Pork crackling",img:"img/chicharron.jpg"},
  {n:"Róbalo",en:"Snook fish"},{n:"Hígado encebollado",en:"Liver and onions"},{n:"Carne molida",en:"Ground beef",img:"api/menu?img=imw7a58x4b0om&v=1794108949188"}
 ];
 const SECO=15000;
@@ -387,7 +391,7 @@ const MENU=[
  {id:"d2",cat:"desayunos",n:"Calentado",en:"Calentado",d:"El de siempre.",den:"The classic.",p:5000},
  {id:"d3",cat:"desayunos",n:"Arepa",en:"Arepa",d:"",den:"",p:1500},
  {id:"d4",cat:"desayunos",n:"Huevos",en:"Eggs",d:"Ármalo a tu gusto.",den:"Your way.",ops:[["Huevo frito","Fried egg",1500],["Huevos revueltos","Scrambled eggs",4000],["Huevos con aliño","Eggs with hogao",5000],["Huevo ranchero","Ranch-style egg",6000]]},
- {id:"d5",cat:"desayunos",n:"Carnes",en:"Meats",d:"Ármalo a tu gusto.",den:"Your way.",img:"demo/carne.jpg",ops:[["Pollo desmechado","Shredded chicken",8000],["Res desmechada","Shredded beef",10000],["Cerdo","Pork",10000],["Res","Beef",10000],["Chicharrón","Pork crackling",10000]]},
+ {id:"d5",cat:"desayunos",n:"Carnes",en:"Meats",d:"Ármalo a tu gusto.",den:"Your way.",img:"img/res.jpg",ops:[["Pollo desmechado","Shredded chicken",8000],["Res desmechada","Shredded beef",10000],["Cerdo","Pork",10000],["Res","Beef",10000],["Chicharrón","Pork crackling",10000]]},
  {id:"d6",cat:"desayunos",n:"Queso",en:"Cheese",d:"",den:"",ops:[["Queso","Cheese",4000],["Queso rallado","Grated cheese",4000]]},
  {id:"d7",cat:"desayunos",n:"Acompañantes",en:"Sides",d:"Ármalo a tu gusto.",den:"Your way.",ops:[["Chorizo","Chorizo",2500],["Salchicha","Sausage",2000],["Patacón","Patacón",5000],["Aliños","Hogao",2000]]},
  {id:"d8",cat:"desayunos",n:"Bebidas calientes",en:"Hot drinks",d:"",den:"",ops:[["Café","Coffee",2000],["Aguapanela","Aguapanela",2000],["Café con leche","Coffee with milk",2500],["Chocolate","Hot chocolate",3000],["Chocolate con leche","Hot chocolate with milk",3500]]}
@@ -453,7 +457,7 @@ function pintarAlm(){
   const s=SOPAS[alm.sopa];$("#armTotal").textContent=cop(s.p||SECO);
   $("#armTipo").textContent=s.p?(lang==="es"?"Almuerzo completo":"Full lunch"):(lang==="es"?"Seco":"Main plate");
   const p=alm.prot!==null?PROT[alm.prot]:null;
-  $("#almFoto").style.backgroundImage=p&&p.img?`url("${IMG+p.img}"), radial-gradient(circle at 30% 30%,#e0301e,#7a0b10 60%,#1a0707)`:`url("${IMG}demo/almuerzo.jpg"), radial-gradient(circle at 30% 30%,#e0301e,#7a0b10 60%,#1a0707)`;
+  $("#almFoto").style.backgroundImage=p&&p.img?`url("${SRC(p.img)}"), radial-gradient(circle at 30% 30%,#e0301e,#7a0b10 60%,#1a0707)`:`url("img/almuerzo-completo.jpg"), radial-gradient(circle at 30% 30%,#e0301e,#7a0b10 60%,#1a0707)`;
 }
 $("#armAgregar").onclick=()=>{
   if(alm.prot===null){aviso(lang==="es"?"Elige la proteína":"Pick a protein");return}
@@ -467,7 +471,7 @@ function pintarTabs(){
   $("#tabs").innerHTML=CATS.map(c=>`<button class="tab ${c===cat?"on":""}" data-c="${c}">${CATN[lang][c]}</button>`).join("");
   $("#tabs").querySelectorAll(".tab").forEach(b=>b.onclick=()=>{cat=b.dataset.c;pintarTabs();pintarPlatos()});
 }
-function foto(src,nm){return src?`<img class="foto" src="${IMG+src}" alt="${nm}" loading="lazy" onerror="this.outerHTML='<div class=&quot;foto letra&quot;>${nm.charAt(0)}</div>'">`:`<div class="foto letra">${nm.charAt(0)}</div>`}
+function foto(src,nm){return src?`<img class="foto" src="${SRC(src)}" alt="${nm}" loading="lazy" onerror="this.outerHTML='<div class=&quot;foto letra&quot;>${nm.charAt(0)}</div>'">`:`<div class="foto letra">${nm.charAt(0)}</div>`}
 function pintarPlatos(){
   $("#platos").innerHTML=MENU.filter(m=>m.cat===cat).map((m,i)=>{
     const nm=L(m),ds=lang==="es"?m.d:m.den;let cuerpo;
